@@ -1,0 +1,13 @@
+Group | Architecture | Loss          | Params    | Accuracy | Reasoning Tokens | Halt F1
+------+--------------+---------------+-----------+----------+------------------+--------
+A     | Transformer  | Cross-Entropy | 5,051,034 | 100.0%   | 25.8 +/- 13.7    | 48.1%  
+B     | Transformer  | Thermodynamic | 5,051,034 | 99.8%    | 25.8 +/- 13.7    | 98.8%  
+C     | SSM          | Cross-Entropy | 5,058,906 | 99.9%    | 25.8 +/- 13.7    | 0.0%   
+D     | SSM          | Thermodynamic | 5,058,906 | 99.7%    | 25.8 +/- 13.7    | 99.2%  
+
+--- Statistical Summary ---
+Token reduction B vs A: 0.0%
+Token reduction C vs A: 0.0%
+Token reduction D vs A: 0.0%
+Expected additive: 0.0%
+Synergy: 0.0%
