@@ -1,0 +1,83 @@
+{
+  "results": [
+    {
+      "group": "B",
+      "architecture": "Transformer",
+      "arch_group": "B",
+      "label": "Trans+L_th",
+      "parity_halt_f1": 0.9879531589650095,
+      "baseline_halt_f1": 0.666356060839585,
+      "baseline_halt_precision": 0.5006462383542329,
+      "baseline_halt_recall": 0.9960357850752132,
+      "final_halt_f1": 0.8488243457779389,
+      "final_halt_precision": 0.7570109151972814,
+      "final_halt_recall": 0.9659827503079784,
+      "transfer_delta": 0.18246828493835388,
+      "arithmetic_accuracy": 0.7399762147468569,
+      "arithmetic_loss": 1.106033816933632,
+      "epochs_trained": 20,
+      "best_val_accuracy": 0.8296799132607363
+    },
+    {
+      "group": "D",
+      "architecture": "SSM",
+      "arch_group": "D",
+      "label": "SSM+L_th",
+      "parity_halt_f1": 0.9924524050918103,
+      "baseline_halt_f1": 0.6283587136117911,
+      "baseline_halt_precision": 0.45922884772338296,
+      "baseline_halt_recall": 0.9946965232763167,
+      "final_halt_f1": 0.9507708660603186,
+      "final_halt_precision": 0.9435973196854881,
+      "final_halt_recall": 0.9580543204585119,
+      "transfer_delta": 0.3224121524485275,
+      "arithmetic_accuracy": 0.7861238532110092,
+      "arithmetic_loss": 0.689951678737998,
+      "epochs_trained": 20,
+      "best_val_accuracy": 0.8265686135860085
+    },
+    {
+      "group": "E_trans",
+      "architecture": "Transformer",
+      "arch_group": "A",
+      "label": "Trans+halt",
+      "parity_halt_f1": 0.998385269121813,
+      "baseline_halt_f1": 0.7192975665521013,
+      "baseline_halt_precision": 0.5628499651926341,
+      "baseline_halt_recall": 0.9961964964910807,
+      "final_halt_f1": 0.8795667899251349,
+      "final_halt_precision": 0.787316907967116,
+      "final_halt_recall": 0.9963036374349924,
+      "transfer_delta": 0.16026922337303362,
+      "arithmetic_accuracy": 0.7476639483520218,
+      "arithmetic_loss": 1.1214801128953695,
+      "epochs_trained": 20,
+      "best_val_accuracy": 0.830434167727337
+    },
+    {
+      "group": "E_ssm",
+      "architecture": "SSM",
+      "arch_group": "C",
+      "label": "SSM+halt",
+      "parity_halt_f1": 0.9870329916540637,
+      "baseline_halt_f1": 0.6555855517611878,
+      "baseline_halt_precision": 0.4887912434878575,
+      "baseline_halt_recall": 0.9951786575239194,
+      "final_halt_f1": 0.9397621174188587,
+      "final_halt_precision": 0.8992559232425641,
+      "final_halt_recall": 0.9840895698290575,
+      "transfer_delta": 0.2841765656576709,
+      "arithmetic_accuracy": 0.7824923547400612,
+      "arithmetic_loss": 0.6831849459558725,
+      "epochs_trained": 17,
+      "best_val_accuracy": 0.8257672182152453
+    }
+  ],
+  "summary": {
+    "ssm_avg_baseline": 0.6419721326864894,
+    "ssm_avg_final": 0.9452664917395887,
+    "trans_avg_baseline": 0.6928268136958431,
+    "trans_avg_final": 0.864195567851537,
+    "ssm_advantage": 0.0810709238880517
+  }
+}

@@ -1,0 +1,230 @@
+{
+  "A": [
+    {
+      "input": "00",
+      "ground_truth": 0,
+      "generated": "<BOS>Input:00 0^0=0 Result:0<HALT>",
+      "parsed_answer": 0,
+      "correct": true,
+      "valid_syntax": true,
+      "reasoning_tokens": 6,
+      "total_tokens": 14,
+      "stop_reason": "halt_token"
+    },
+    {
+      "input": "0011",
+      "ground_truth": 0,
+      "generated": "<BOS>Input:0011 0^0=0 0^1=1 1^1=0 Result:0<HALT>",
+      "parsed_answer": 0,
+      "correct": true,
+      "valid_syntax": true,
+      "reasoning_tokens": 18,
+      "total_tokens": 28,
+      "stop_reason": "halt_token"
+    },
+    {
+      "input": "011101",
+      "ground_truth": 0,
+      "generated": "<BOS>Input:011101 0^1=1 1^1=0 0^1=1 1^0=1 1^1=0 Result:0<HALT>",
+      "parsed_answer": 0,
+      "correct": true,
+      "valid_syntax": true,
+      "reasoning_tokens": 30,
+      "total_tokens": 42,
+      "stop_reason": "halt_token"
+    },
+    {
+      "input": "10111001",
+      "ground_truth": 1,
+      "generated": "<BOS>Input:10111001 1^0=1 1^1=0 0^1=1 1^1=0 0^0=0 0^0=0 0^1=1 Result:1<HALT>",
+      "parsed_answer": 1,
+      "correct": true,
+      "valid_syntax": true,
+      "reasoning_tokens": 42,
+      "total_tokens": 56,
+      "stop_reason": "halt_token"
+    },
+    {
+      "input": "0011111110",
+      "ground_truth": 1,
+      "generated": "<BOS>Input:0011111110 0^1=1 1^1=0 Result:0<HALT>",
+      "parsed_answer": 0,
+      "correct": false,
+      "valid_syntax": true,
+      "reasoning_tokens": 12,
+      "total_tokens": 28,
+      "stop_reason": "halt_token"
+    }
+  ],
+  "B": [
+    {
+      "input": "00",
+      "ground_truth": 0,
+      "generated": "<BOS>Input:00 0^0=0 Result:0<HALT>",
+      "parsed_answer": 0,
+      "correct": true,
+      "valid_syntax": true,
+      "reasoning_tokens": 6,
+      "total_tokens": 14,
+      "stop_reason": "halt_token"
+    },
+    {
+      "input": "0011",
+      "ground_truth": 0,
+      "generated": "<BOS>Input:0011 0^0=0 0^1=1 1^1=0 Result:0",
+      "parsed_answer": 0,
+      "correct": true,
+      "valid_syntax": true,
+      "reasoning_tokens": 18,
+      "total_tokens": 27,
+      "stop_reason": "halt_confidence"
+    },
+    {
+      "input": "011101",
+      "ground_truth": 0,
+      "generated": "<BOS>Input:011101 0^1=1 1^1=0 0^1=1 1^0=1 1^1=0 Result:0",
+      "parsed_answer": 0,
+      "correct": true,
+      "valid_syntax": true,
+      "reasoning_tokens": 30,
+      "total_tokens": 41,
+      "stop_reason": "halt_confidence"
+    },
+    {
+      "input": "10111001",
+      "ground_truth": 1,
+      "generated": "<BOS>Input:10111001 1^0=1 1^1=0 0^1=1 1^1=0 0^0=1 1^0=1 1^1=0 Result:0",
+      "parsed_answer": 0,
+      "correct": false,
+      "valid_syntax": true,
+      "reasoning_tokens": 42,
+      "total_tokens": 55,
+      "stop_reason": "halt_confidence"
+    },
+    {
+      "input": "0011111110",
+      "ground_truth": 1,
+      "generated": "<BOS>Input:0011111110 0^1=1 1^1=0 Result:0<HALT>",
+      "parsed_answer": 0,
+      "correct": false,
+      "valid_syntax": true,
+      "reasoning_tokens": 12,
+      "total_tokens": 28,
+      "stop_reason": "halt_token"
+    }
+  ],
+  "C": [
+    {
+      "input": "00",
+      "ground_truth": 0,
+      "generated": "<BOS>Input:00 0^0=0 Result:0<HALT>",
+      "parsed_answer": 0,
+      "correct": true,
+      "valid_syntax": true,
+      "reasoning_tokens": 6,
+      "total_tokens": 14,
+      "stop_reason": "halt_token"
+    },
+    {
+      "input": "0011",
+      "ground_truth": 0,
+      "generated": "<BOS>Input:0011 0^0=0 0^1=1 1^1=0 Result:0<HALT>",
+      "parsed_answer": 0,
+      "correct": true,
+      "valid_syntax": true,
+      "reasoning_tokens": 18,
+      "total_tokens": 28,
+      "stop_reason": "halt_token"
+    },
+    {
+      "input": "011101",
+      "ground_truth": 0,
+      "generated": "<BOS>Input:011101 0^1=1 1^1=0 0^1=1 1^0=1 1^1=0 Result:0<HALT>",
+      "parsed_answer": 0,
+      "correct": true,
+      "valid_syntax": true,
+      "reasoning_tokens": 30,
+      "total_tokens": 42,
+      "stop_reason": "halt_token"
+    },
+    {
+      "input": "10111001",
+      "ground_truth": 1,
+      "generated": "<BOS>Input:10111001 1^0=1 1^1=0 0^1=1 1^1=0 0^0=0 0^0=0 0^1=1 Result:1<HALT>",
+      "parsed_answer": 1,
+      "correct": true,
+      "valid_syntax": true,
+      "reasoning_tokens": 42,
+      "total_tokens": 56,
+      "stop_reason": "halt_token"
+    },
+    {
+      "input": "0011111110",
+      "ground_truth": 1,
+      "generated": "<BOS>Input:0011111110 0^0=0 0^1=1 Result:1<HALT>",
+      "parsed_answer": 1,
+      "correct": true,
+      "valid_syntax": true,
+      "reasoning_tokens": 12,
+      "total_tokens": 28,
+      "stop_reason": "halt_token"
+    }
+  ],
+  "D": [
+    {
+      "input": "00",
+      "ground_truth": 0,
+      "generated": "<BOS>Input:00 0^0=0 Result:0",
+      "parsed_answer": 0,
+      "correct": true,
+      "valid_syntax": true,
+      "reasoning_tokens": 6,
+      "total_tokens": 13,
+      "stop_reason": "halt_confidence"
+    },
+    {
+      "input": "0011",
+      "ground_truth": 0,
+      "generated": "<BOS>Input:0011 0^0=0 0^1=1 1^1=0 Result:0",
+      "parsed_answer": 0,
+      "correct": true,
+      "valid_syntax": true,
+      "reasoning_tokens": 18,
+      "total_tokens": 27,
+      "stop_reason": "halt_confidence"
+    },
+    {
+      "input": "011101",
+      "ground_truth": 0,
+      "generated": "<BOS>Input:011101 0^1=1 1^1=0 0^0=0 0^1=1 1^1=0 Result:0",
+      "parsed_answer": 0,
+      "correct": true,
+      "valid_syntax": true,
+      "reasoning_tokens": 30,
+      "total_tokens": 41,
+      "stop_reason": "halt_confidence"
+    },
+    {
+      "input": "10111001",
+      "ground_truth": 1,
+      "generated": "<BOS>Input:10111001 1^0=1 1^1=0 0^1=1 1^0=1 1^1=0 0^0=0 0^1=1 Result:1",
+      "parsed_answer": 1,
+      "correct": true,
+      "valid_syntax": true,
+      "reasoning_tokens": 42,
+      "total_tokens": 55,
+      "stop_reason": "halt_confidence"
+    },
+    {
+      "input": "0011111110",
+      "ground_truth": 1,
+      "generated": "<BOS>Input:0011111110 0^1=1 1^0=1 Result:1",
+      "parsed_answer": 1,
+      "correct": true,
+      "valid_syntax": true,
+      "reasoning_tokens": 12,
+      "total_tokens": 27,
+      "stop_reason": "halt_confidence"
+    }
+  ]
+}

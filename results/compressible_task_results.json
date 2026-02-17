@@ -1,0 +1,165 @@
+{
+  "teacher_forced": {
+    "accuracy": 0.962,
+    "halt_f1": 0.9567073691401247
+  },
+  "tier_metrics": {
+    "0": {
+      "n": 319,
+      "accuracy": 0.3981191222570533,
+      "mean_reasoning_tokens": 31.871473354231973,
+      "std_reasoning_tokens": 7.595108640348364,
+      "median_reasoning_tokens": 32.0,
+      "token_economy_eta": 0.012491393724795909,
+      "mean_halt_time": 31.354231974921632,
+      "std_halt_time": 7.614738181729013,
+      "mean_effective_ops": 5.495297805642633,
+      "convergence": {
+        "false_convergence": 319
+      },
+      "stop_reasons": {
+        "halt_confidence": 311,
+        "halt_token": 8
+      }
+    },
+    "1": {
+      "n": 342,
+      "accuracy": 0.41812865497076024,
+      "mean_reasoning_tokens": 21.862573099415204,
+      "std_reasoning_tokens": 8.57177145599317,
+      "median_reasoning_tokens": 23.0,
+      "token_economy_eta": 0.019125317640765013,
+      "mean_halt_time": 21.470760233918128,
+      "std_halt_time": 8.317038033114109,
+      "mean_effective_ops": 3.807017543859649,
+      "convergence": {
+        "false_convergence": 339,
+        "true_convergence": 3
+      },
+      "stop_reasons": {
+        "halt_confidence": 332,
+        "halt_token": 10
+      }
+    },
+    "2": {
+      "n": 339,
+      "accuracy": 0.6519174041297935,
+      "mean_reasoning_tokens": 16.519174041297934,
+      "std_reasoning_tokens": 10.345452789418509,
+      "median_reasoning_tokens": 18.0,
+      "token_economy_eta": 0.039464285714285716,
+      "mean_halt_time": 16.3952802359882,
+      "std_halt_time": 9.975638829378857,
+      "mean_effective_ops": 2.8997050147492627,
+      "convergence": {
+        "false_convergence": 306,
+        "true_convergence": 33
+      },
+      "stop_reasons": {
+        "halt_confidence": 334,
+        "halt_token": 5
+      }
+    }
+  },
+  "basin_analysis": {
+    "convergence": {
+      "label": "True Convergence",
+      "n": 36,
+      "accuracy": 0.9444444444444444,
+      "mean_tokens": 0.0,
+      "mean_entropy_at_halt": 2.9629911449220447,
+      "mean_halt_conf_at_stop": 0.9179372704691358,
+      "mean_final_entropy": 2.938550247086419,
+      "entropy_variance_last5": 0.05485250382980034
+    },
+    "cycling": {
+      "label": "State Cycling",
+      "n": 964,
+      "accuracy": 0.47406639004149376,
+      "mean_tokens": 24.112033195020746,
+      "mean_entropy_at_halt": 2.992708643937012,
+      "mean_halt_conf_at_stop": 0.6490696661823518,
+      "mean_final_entropy": 3.282298486757081,
+      "entropy_variance_last5": 0.062370880049226474
+    },
+    "accuracy_gap": -0.47037805440295066,
+    "interpretation": "USS_robust_convergence_advantage",
+    "tier_breakdown": {
+      "0": {
+        "convergence": {
+          "label": "T0 Converged",
+          "n": 0,
+          "accuracy": 0,
+          "mean_tokens": 0,
+          "mean_entropy_at_halt": 0,
+          "mean_halt_conf_at_stop": 0,
+          "mean_final_entropy": 0,
+          "entropy_variance": 0
+        },
+        "cycling": {
+          "label": "T0 Cycling",
+          "n": 319,
+          "accuracy": 0.3981191222570533,
+          "mean_tokens": 31.871473354231973,
+          "mean_entropy_at_halt": 2.964552747792211,
+          "mean_halt_conf_at_stop": 0.6311004855042341,
+          "mean_final_entropy": 3.3215952652001457,
+          "entropy_variance_last5": 0.0661302603459356
+        }
+      },
+      "1": {
+        "convergence": {
+          "label": "T1 Converged",
+          "n": 3,
+          "accuracy": 0.6666666666666666,
+          "mean_tokens": 0.0,
+          "mean_entropy_at_halt": 2.911466201146444,
+          "mean_halt_conf_at_stop": 0.9472463925679525,
+          "mean_final_entropy": 2.8162472248077393,
+          "entropy_variance_last5": 0.09223079257713429
+        },
+        "cycling": {
+          "label": "T1 Cycling",
+          "n": 339,
+          "accuracy": 0.415929203539823,
+          "mean_tokens": 22.05604719764012,
+          "mean_entropy_at_halt": 2.990840711424836,
+          "mean_halt_conf_at_stop": 0.6409861070919881,
+          "mean_final_entropy": 3.2601337728247177,
+          "entropy_variance_last5": 0.06234043793369966
+        }
+      },
+      "2": {
+        "convergence": {
+          "label": "T2 Converged",
+          "n": 33,
+          "accuracy": 0.9696969696969697,
+          "mean_tokens": 0.0,
+          "mean_entropy_at_halt": 2.9676752307198266,
+          "mean_halt_conf_at_stop": 0.9152728048237887,
+          "mean_final_entropy": 2.949668703657208,
+          "entropy_variance_last5": 0.017474215082466396
+        },
+        "cycling": {
+          "label": "T2 Cycling",
+          "n": 306,
+          "accuracy": 0.6176470588235294,
+          "mean_tokens": 18.30065359477124,
+          "mean_entropy_at_halt": 3.024130081818774,
+          "mean_halt_conf_at_stop": 0.6767575588880801,
+          "mean_final_entropy": 3.2658872635535943,
+          "entropy_variance_last5": 0.05848551260645974
+        }
+      }
+    }
+  },
+  "training_history": [],
+  "config": {
+    "epochs": 40,
+    "lr": 0.001,
+    "batch_size": 32,
+    "train_n": 8000,
+    "val_n": 1000,
+    "test_n": 1000
+  }
+}

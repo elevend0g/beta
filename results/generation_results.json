@@ -1,0 +1,384 @@
+{
+  "metrics": {
+    "A": {
+      "group": "A",
+      "n_examples": 500,
+      "accuracy": 0.9,
+      "valid_syntax_rate": 1.0,
+      "mean_reasoning_tokens": 20.784,
+      "median_reasoning_tokens": 18.0,
+      "std_reasoning_tokens": 12.592432012919506,
+      "min_reasoning_tokens": 6,
+      "max_reasoning_tokens": 42,
+      "mean_total_tokens": 32.648,
+      "halt_token_rate": 1.0,
+      "stop_reasons": {
+        "halt_token": 500
+      },
+      "by_input_length": {
+        "2": {
+          "n": 66,
+          "accuracy": 1.0,
+          "mean_reasoning_tokens": 6.0,
+          "std_reasoning_tokens": 0.0,
+          "valid_syntax_rate": 1.0
+        },
+        "3": {
+          "n": 59,
+          "accuracy": 1.0,
+          "mean_reasoning_tokens": 12.0,
+          "std_reasoning_tokens": 0.0,
+          "valid_syntax_rate": 1.0
+        },
+        "4": {
+          "n": 56,
+          "accuracy": 1.0,
+          "mean_reasoning_tokens": 18.0,
+          "std_reasoning_tokens": 0.0,
+          "valid_syntax_rate": 1.0
+        },
+        "5": {
+          "n": 38,
+          "accuracy": 1.0,
+          "mean_reasoning_tokens": 24.0,
+          "std_reasoning_tokens": 0.0,
+          "valid_syntax_rate": 1.0
+        },
+        "6": {
+          "n": 63,
+          "accuracy": 1.0,
+          "mean_reasoning_tokens": 30.0,
+          "std_reasoning_tokens": 0.0,
+          "valid_syntax_rate": 1.0
+        },
+        "7": {
+          "n": 63,
+          "accuracy": 1.0,
+          "mean_reasoning_tokens": 36.0,
+          "std_reasoning_tokens": 0.0,
+          "valid_syntax_rate": 1.0
+        },
+        "8": {
+          "n": 55,
+          "accuracy": 1.0,
+          "mean_reasoning_tokens": 42.0,
+          "std_reasoning_tokens": 0.0,
+          "valid_syntax_rate": 1.0
+        },
+        "9": {
+          "n": 50,
+          "accuracy": 0.56,
+          "mean_reasoning_tokens": 6.0,
+          "std_reasoning_tokens": 0.0,
+          "valid_syntax_rate": 1.0
+        },
+        "10": {
+          "n": 50,
+          "accuracy": 0.44,
+          "mean_reasoning_tokens": 12.0,
+          "std_reasoning_tokens": 0.0,
+          "valid_syntax_rate": 1.0
+        }
+      }
+    },
+    "B": {
+      "group": "B",
+      "n_examples": 500,
+      "accuracy": 0.702,
+      "valid_syntax_rate": 1.0,
+      "mean_reasoning_tokens": 20.784,
+      "median_reasoning_tokens": 18.0,
+      "std_reasoning_tokens": 12.592432012919506,
+      "min_reasoning_tokens": 6,
+      "max_reasoning_tokens": 42,
+      "mean_total_tokens": 31.898,
+      "halt_token_rate": 0.25,
+      "stop_reasons": {
+        "halt_confidence": 375,
+        "halt_token": 125
+      },
+      "by_input_length": {
+        "2": {
+          "n": 66,
+          "accuracy": 1.0,
+          "mean_reasoning_tokens": 6.0,
+          "std_reasoning_tokens": 0.0,
+          "valid_syntax_rate": 1.0
+        },
+        "3": {
+          "n": 59,
+          "accuracy": 1.0,
+          "mean_reasoning_tokens": 12.0,
+          "std_reasoning_tokens": 0.0,
+          "valid_syntax_rate": 1.0
+        },
+        "4": {
+          "n": 56,
+          "accuracy": 1.0,
+          "mean_reasoning_tokens": 18.0,
+          "std_reasoning_tokens": 0.0,
+          "valid_syntax_rate": 1.0
+        },
+        "5": {
+          "n": 38,
+          "accuracy": 0.7105263157894737,
+          "mean_reasoning_tokens": 24.0,
+          "std_reasoning_tokens": 0.0,
+          "valid_syntax_rate": 1.0
+        },
+        "6": {
+          "n": 63,
+          "accuracy": 0.6666666666666666,
+          "mean_reasoning_tokens": 30.0,
+          "std_reasoning_tokens": 0.0,
+          "valid_syntax_rate": 1.0
+        },
+        "7": {
+          "n": 63,
+          "accuracy": 0.47619047619047616,
+          "mean_reasoning_tokens": 36.0,
+          "std_reasoning_tokens": 0.0,
+          "valid_syntax_rate": 1.0
+        },
+        "8": {
+          "n": 55,
+          "accuracy": 0.4,
+          "mean_reasoning_tokens": 42.0,
+          "std_reasoning_tokens": 0.0,
+          "valid_syntax_rate": 1.0
+        },
+        "9": {
+          "n": 50,
+          "accuracy": 0.54,
+          "mean_reasoning_tokens": 6.0,
+          "std_reasoning_tokens": 0.0,
+          "valid_syntax_rate": 1.0
+        },
+        "10": {
+          "n": 50,
+          "accuracy": 0.44,
+          "mean_reasoning_tokens": 12.0,
+          "std_reasoning_tokens": 0.0,
+          "valid_syntax_rate": 1.0
+        }
+      }
+    },
+    "C": {
+      "group": "C",
+      "n_examples": 500,
+      "accuracy": 0.88,
+      "valid_syntax_rate": 1.0,
+      "mean_reasoning_tokens": 20.784,
+      "median_reasoning_tokens": 18.0,
+      "std_reasoning_tokens": 12.592432012919506,
+      "min_reasoning_tokens": 6,
+      "max_reasoning_tokens": 42,
+      "mean_total_tokens": 32.648,
+      "halt_token_rate": 1.0,
+      "stop_reasons": {
+        "halt_token": 500
+      },
+      "by_input_length": {
+        "2": {
+          "n": 66,
+          "accuracy": 1.0,
+          "mean_reasoning_tokens": 6.0,
+          "std_reasoning_tokens": 0.0,
+          "valid_syntax_rate": 1.0
+        },
+        "3": {
+          "n": 59,
+          "accuracy": 1.0,
+          "mean_reasoning_tokens": 12.0,
+          "std_reasoning_tokens": 0.0,
+          "valid_syntax_rate": 1.0
+        },
+        "4": {
+          "n": 56,
+          "accuracy": 1.0,
+          "mean_reasoning_tokens": 18.0,
+          "std_reasoning_tokens": 0.0,
+          "valid_syntax_rate": 1.0
+        },
+        "5": {
+          "n": 38,
+          "accuracy": 1.0,
+          "mean_reasoning_tokens": 24.0,
+          "std_reasoning_tokens": 0.0,
+          "valid_syntax_rate": 1.0
+        },
+        "6": {
+          "n": 63,
+          "accuracy": 1.0,
+          "mean_reasoning_tokens": 30.0,
+          "std_reasoning_tokens": 0.0,
+          "valid_syntax_rate": 1.0
+        },
+        "7": {
+          "n": 63,
+          "accuracy": 1.0,
+          "mean_reasoning_tokens": 36.0,
+          "std_reasoning_tokens": 0.0,
+          "valid_syntax_rate": 1.0
+        },
+        "8": {
+          "n": 55,
+          "accuracy": 1.0,
+          "mean_reasoning_tokens": 42.0,
+          "std_reasoning_tokens": 0.0,
+          "valid_syntax_rate": 1.0
+        },
+        "9": {
+          "n": 50,
+          "accuracy": 0.32,
+          "mean_reasoning_tokens": 6.0,
+          "std_reasoning_tokens": 0.0,
+          "valid_syntax_rate": 1.0
+        },
+        "10": {
+          "n": 50,
+          "accuracy": 0.48,
+          "mean_reasoning_tokens": 12.0,
+          "std_reasoning_tokens": 0.0,
+          "valid_syntax_rate": 1.0
+        }
+      }
+    },
+    "D": {
+      "group": "D",
+      "n_examples": 500,
+      "accuracy": 0.712,
+      "valid_syntax_rate": 1.0,
+      "mean_reasoning_tokens": 20.784,
+      "median_reasoning_tokens": 18.0,
+      "std_reasoning_tokens": 12.592432012919506,
+      "min_reasoning_tokens": 6,
+      "max_reasoning_tokens": 42,
+      "mean_total_tokens": 31.86,
+      "halt_token_rate": 0.212,
+      "stop_reasons": {
+        "halt_token": 106,
+        "halt_confidence": 394
+      },
+      "by_input_length": {
+        "2": {
+          "n": 66,
+          "accuracy": 1.0,
+          "mean_reasoning_tokens": 6.0,
+          "std_reasoning_tokens": 0.0,
+          "valid_syntax_rate": 1.0
+        },
+        "3": {
+          "n": 59,
+          "accuracy": 1.0,
+          "mean_reasoning_tokens": 12.0,
+          "std_reasoning_tokens": 0.0,
+          "valid_syntax_rate": 1.0
+        },
+        "4": {
+          "n": 56,
+          "accuracy": 0.9464285714285714,
+          "mean_reasoning_tokens": 18.0,
+          "std_reasoning_tokens": 0.0,
+          "valid_syntax_rate": 1.0
+        },
+        "5": {
+          "n": 38,
+          "accuracy": 0.8421052631578947,
+          "mean_reasoning_tokens": 24.0,
+          "std_reasoning_tokens": 0.0,
+          "valid_syntax_rate": 1.0
+        },
+        "6": {
+          "n": 63,
+          "accuracy": 0.6666666666666666,
+          "mean_reasoning_tokens": 30.0,
+          "std_reasoning_tokens": 0.0,
+          "valid_syntax_rate": 1.0
+        },
+        "7": {
+          "n": 63,
+          "accuracy": 0.5396825396825397,
+          "mean_reasoning_tokens": 36.0,
+          "std_reasoning_tokens": 0.0,
+          "valid_syntax_rate": 1.0
+        },
+        "8": {
+          "n": 55,
+          "accuracy": 0.509090909090909,
+          "mean_reasoning_tokens": 42.0,
+          "std_reasoning_tokens": 0.0,
+          "valid_syntax_rate": 1.0
+        },
+        "9": {
+          "n": 50,
+          "accuracy": 0.32,
+          "mean_reasoning_tokens": 6.0,
+          "std_reasoning_tokens": 0.0,
+          "valid_syntax_rate": 1.0
+        },
+        "10": {
+          "n": 50,
+          "accuracy": 0.52,
+          "mean_reasoning_tokens": 12.0,
+          "std_reasoning_tokens": 0.0,
+          "valid_syntax_rate": 1.0
+        }
+      }
+    }
+  },
+  "comparisons": {
+    "D_vs_A": {
+      "D_mean": 20.784,
+      "D_std": 12.592432012919506,
+      "A_mean": 20.784,
+      "A_std": 12.592432012919506,
+      "mean_reduction_pct": 0.0,
+      "t_statistic": 0.0,
+      "t_pvalue": 1.0,
+      "cohens_d": 0.0,
+      "mann_whitney_U": 125000.0,
+      "mann_whitney_p": 1.0
+    },
+    "D_vs_B": {
+      "D_mean": 20.784,
+      "D_std": 12.592432012919506,
+      "B_mean": 20.784,
+      "B_std": 12.592432012919506,
+      "mean_reduction_pct": 0.0,
+      "t_statistic": 0.0,
+      "t_pvalue": 1.0,
+      "cohens_d": 0.0,
+      "mann_whitney_U": 125000.0,
+      "mann_whitney_p": 1.0
+    },
+    "D_vs_C": {
+      "D_mean": 20.784,
+      "D_std": 12.592432012919506,
+      "C_mean": 20.784,
+      "C_std": 12.592432012919506,
+      "mean_reduction_pct": 0.0,
+      "t_statistic": 0.0,
+      "t_pvalue": 1.0,
+      "cohens_d": 0.0,
+      "mann_whitney_U": 125000.0,
+      "mann_whitney_p": 1.0
+    },
+    "B_vs_A": {
+      "B_mean": 20.784,
+      "A_mean": 20.784,
+      "mean_reduction_pct": 0.0,
+      "t_statistic": 0.0,
+      "t_pvalue": 1.0,
+      "cohens_d": 0.0
+    },
+    "C_vs_A": {
+      "C_mean": 20.784,
+      "A_mean": 20.784,
+      "mean_reduction_pct": 0.0,
+      "t_statistic": 0.0,
+      "t_pvalue": 1.0,
+      "cohens_d": 0.0
+    }
+  }
+}

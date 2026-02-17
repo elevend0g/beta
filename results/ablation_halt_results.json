@@ -1,0 +1,37 @@
+{
+  "E_trans": {
+    "teacher_forced_accuracy": 1.0,
+    "halt_f1": 0.998385269121813,
+    "free_gen": {
+      "accuracy": 0.892,
+      "valid_syntax_rate": 1.0,
+      "mean_reasoning_tokens": 20.784,
+      "std_reasoning_tokens": 12.592432012919506,
+      "stop_reasons": {
+        "halt_confidence": 500
+      }
+    }
+  },
+  "E_ssm": {
+    "teacher_forced_accuracy": 1.0,
+    "halt_f1": 0.9870329916540637,
+    "free_gen": {
+      "accuracy": 0.884,
+      "valid_syntax_rate": 1.0,
+      "mean_reasoning_tokens": 22.02,
+      "std_reasoning_tokens": 13.757020026153919,
+      "stop_reasons": {
+        "halt_confidence": 491,
+        "halt_token": 9
+      }
+    }
+  },
+  "comparison": {
+    "B_halt_f1": 0.9879531589650095,
+    "E_trans_halt_f1": 0.998385269121813,
+    "D_halt_f1": 0.9924524050918103,
+    "E_ssm_halt_f1": 0.9870329916540637,
+    "trans_diff": 0.010432110156803565,
+    "ssm_diff": 0.005419413437746656
+  }
+}

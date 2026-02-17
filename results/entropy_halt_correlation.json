@@ -1,0 +1,110 @@
+{
+  "A": {
+    "n_examples": 791,
+    "d_model_probe": {
+      "probe_accuracy": 0.8900126422250316,
+      "mean_pearson_r": -0.07449570598402185,
+      "std_pearson_r": 0.20651542721616262,
+      "median_pearson_r": -0.06845322996377945,
+      "fraction_negative": 0.6422250316055625,
+      "fraction_significant": 0.19469026548672566,
+      "n_valid": 791,
+      "interpretation": "no_correlation"
+    }
+  },
+  "B": {
+    "n_examples": 791,
+    "d_model_probe": {
+      "probe_accuracy": 0.9355246523388117,
+      "mean_pearson_r": -0.17194156281600909,
+      "std_pearson_r": 0.29241876090052943,
+      "median_pearson_r": -0.07180517166852951,
+      "fraction_negative": 0.6485461441213654,
+      "fraction_significant": 0.30973451327433627,
+      "n_valid": 791,
+      "interpretation": "weak_tracking"
+    }
+  },
+  "C": {
+    "n_examples": 791,
+    "d_model_probe": {
+      "probe_accuracy": 0.9987357774968394,
+      "mean_pearson_r": 0.26724753830689046,
+      "std_pearson_r": 0.20522829696616363,
+      "median_pearson_r": 0.24357269704341888,
+      "fraction_negative": 0.05562579013906448,
+      "fraction_significant": 0.38179519595448796,
+      "n_valid": 791,
+      "interpretation": "ambiguous"
+    },
+    "d_state_probe": {
+      "probe_accuracy": 0.9216182048040455,
+      "mean_pearson_r": -0.7593177127099671,
+      "std_pearson_r": 0.0736093679020468,
+      "median_pearson_r": -0.7758368253707886,
+      "fraction_negative": 1.0,
+      "fraction_significant": 1.0,
+      "n_valid": 791,
+      "interpretation": "genuine_tracking"
+    }
+  },
+  "D": {
+    "n_examples": 791,
+    "d_model_probe": {
+      "probe_accuracy": 0.9936788874841972,
+      "mean_pearson_r": -0.6591609338146556,
+      "std_pearson_r": 0.2961887963603776,
+      "median_pearson_r": -0.7592039108276367,
+      "fraction_negative": 0.9190897597977244,
+      "fraction_significant": 0.9152970922882427,
+      "n_valid": 791,
+      "interpretation": "genuine_tracking"
+    },
+    "d_state_probe": {
+      "probe_accuracy": 0.6434892541087232,
+      "mean_pearson_r": -0.1972012323287331,
+      "std_pearson_r": 0.1815712011394005,
+      "median_pearson_r": -0.18860629200935364,
+      "fraction_negative": 0.8381795195954488,
+      "fraction_significant": 0.3388116308470291,
+      "n_valid": 791,
+      "interpretation": "weak_tracking"
+    }
+  },
+  "E_trans": {
+    "n_examples": 791,
+    "d_model_probe": {
+      "probe_accuracy": 0.9785082174462706,
+      "mean_pearson_r": -0.11078244855584884,
+      "std_pearson_r": 0.2844894315438985,
+      "median_pearson_r": -0.04690347984433174,
+      "fraction_negative": 0.5916561314791403,
+      "fraction_significant": 0.2427307206068268,
+      "n_valid": 791,
+      "interpretation": "no_correlation"
+    }
+  },
+  "E_ssm": {
+    "n_examples": 791,
+    "d_model_probe": {
+      "probe_accuracy": 0.9962073324905183,
+      "mean_pearson_r": -0.7343160952473037,
+      "std_pearson_r": 0.2522773417956973,
+      "median_pearson_r": -0.8094743490219116,
+      "fraction_negative": 0.9734513274336283,
+      "fraction_significant": 0.9216182048040455,
+      "n_valid": 791,
+      "interpretation": "genuine_tracking"
+    },
+    "d_state_probe": {
+      "probe_accuracy": 0.7016434892541087,
+      "mean_pearson_r": 0.012049514412798704,
+      "std_pearson_r": 0.14516635202658026,
+      "median_pearson_r": -0.0070872316136956215,
+      "fraction_negative": 0.5056890012642224,
+      "fraction_significant": 0.017699115044247787,
+      "n_valid": 791,
+      "interpretation": "no_correlation"
+    }
+  }
+}
