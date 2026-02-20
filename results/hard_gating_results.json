@@ -1,0 +1,162 @@
+{
+  "teacher_forced": {
+    "accuracy": 0.955,
+    "halt_f1": 0.9690123777373842
+  },
+  "op_detector_teacher_forced": {
+    "accuracy": 0.7481271697423716,
+    "per_type_f1": {
+      "real": {
+        "precision": 0.8090568532393124,
+        "recall": 0.9092372461614661,
+        "f1": 0.8562266791044776,
+        "n": 8076
+      },
+      "identity": {
+        "precision": 1.0,
+        "recall": 0.4789473684210526,
+        "f1": 0.6476868327402135,
+        "n": 380
+      },
+      "cancel_start": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "n": 1076
+      },
+      "cancel_end": {
+        "precision": 1.0,
+        "recall": 0.46189591078066916,
+        "f1": 0.6319135410044501,
+        "n": 1076
+      },
+      "star_zero": {
+        "precision": 0.9277777777777778,
+        "recall": 0.4940828402366864,
+        "f1": 0.6447876447876448,
+        "n": 338
+      }
+    }
+  },
+  "op_detector_autoregressive": {
+    "accuracy": 0.7481271697423716,
+    "per_type_f1": {
+      "real": {
+        "precision": 0.8090568532393124,
+        "recall": 0.9092372461614661,
+        "f1": 0.8562266791044776,
+        "n": 8076
+      },
+      "identity": {
+        "precision": 1.0,
+        "recall": 0.4789473684210526,
+        "f1": 0.6476868327402135,
+        "n": 380
+      },
+      "cancel_start": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "n": 1076
+      },
+      "cancel_end": {
+        "precision": 1.0,
+        "recall": 0.46189591078066916,
+        "f1": 0.6319135410044501,
+        "n": 1076
+      },
+      "star_zero": {
+        "precision": 0.9277777777777778,
+        "recall": 0.4940828402366864,
+        "f1": 0.6447876447876448,
+        "n": 338
+      }
+    },
+    "n_samples": 10946
+  },
+  "teacher_student_gap": {
+    "tf_accuracy": 0.7481271697423716,
+    "ar_accuracy": 0.7481271697423716,
+    "gap": 0.0
+  },
+  "gate_activation": {
+    "correlations": {
+      "real": 0.8259878392771411,
+      "identity": 0.6957223047664949,
+      "cancel_start": 0.5195975171313555,
+      "cancel_end": 0.7100985178746281,
+      "star_zero": 0.738853450118268
+    },
+    "mean_correlation": 0.6980519258335776,
+    "mean_activations": {
+      "pad": 0.7520853129951459,
+      "real": 0.22361316413601764,
+      "identity": 0.004745087303692289,
+      "cancel_start": 0.001445993325855513,
+      "cancel_end": 0.01310221450147187,
+      "star_zero": 0.005008228184670982
+    }
+  },
+  "tier_metrics": {
+    "0": {
+      "n": 319,
+      "accuracy": 0.4106583072100313,
+      "mean_reasoning_tokens": 32.80564263322884,
+      "std_reasoning_tokens": 8.06205358284119,
+      "mean_halt_time": 33.043887147335425,
+      "convergence": {
+        "false_convergence": 319
+      }
+    },
+    "1": {
+      "n": 342,
+      "accuracy": 0.4093567251461988,
+      "mean_reasoning_tokens": 21.88888888888889,
+      "std_reasoning_tokens": 8.68482877276321,
+      "mean_halt_time": 22.22514619883041,
+      "convergence": {
+        "false_convergence": 338,
+        "true_convergence": 4
+      }
+    },
+    "2": {
+      "n": 339,
+      "accuracy": 0.6106194690265486,
+      "mean_reasoning_tokens": 16.460176991150444,
+      "std_reasoning_tokens": 10.729197116519684,
+      "mean_halt_time": 16.47197640117994,
+      "convergence": {
+        "false_convergence": 300,
+        "true_convergence": 39
+      }
+    }
+  },
+  "geodesic_purity": {
+    "1": {
+      "mean": 0.0,
+      "std": 0.0,
+      "n": 342
+    },
+    "2": {
+      "mean": 0.17994100294985252,
+      "std": 0.37012421372987914,
+      "n": 339
+    }
+  },
+  "overall_purity": 0.08957415565345081,
+  "basin_analysis": {
+    "convergence": {
+      "n": 43,
+      "accuracy": 0.7906976744186046,
+      "mean_tokens": 0.13953488372093023
+    },
+    "cycling": {
+      "n": 957,
+      "accuracy": 0.46394984326018807,
+      "mean_tokens": 24.582027168234063
+    },
+    "accuracy_gap": -0.32674783115841655
+  },
+  "training_epochs": 0,
+  "history": []
+}

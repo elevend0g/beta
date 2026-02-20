@@ -1,0 +1,307 @@
+{
+  "14a0_budget": {
+    "(0.95, 0)": {
+      "accuracy": 0.4263322884012539,
+      "mean_tokens": 32.626959247648905,
+      "true_convergence": 0,
+      "n": 319
+    },
+    "(0.95, 1)": {
+      "accuracy": 0.45614035087719296,
+      "mean_tokens": 22.30701754385965,
+      "true_convergence": 4,
+      "n": 342
+    },
+    "(0.95, 2)": {
+      "accuracy": 0.6637168141592921,
+      "mean_tokens": 16.67551622418879,
+      "true_convergence": 35,
+      "n": 339
+    },
+    "(0.95, 'all')": {
+      "accuracy": 0.517,
+      "mean_tokens": 23.69,
+      "true_convergence": 39,
+      "n": 1000
+    },
+    "(0.98, 0)": {
+      "accuracy": 0.4263322884012539,
+      "mean_tokens": 32.626959247648905,
+      "true_convergence": 0,
+      "n": 319
+    },
+    "(0.98, 1)": {
+      "accuracy": 0.45614035087719296,
+      "mean_tokens": 22.30701754385965,
+      "true_convergence": 4,
+      "n": 342
+    },
+    "(0.98, 2)": {
+      "accuracy": 0.6637168141592921,
+      "mean_tokens": 16.67551622418879,
+      "true_convergence": 35,
+      "n": 339
+    },
+    "(0.98, 'all')": {
+      "accuracy": 0.517,
+      "mean_tokens": 23.69,
+      "true_convergence": 39,
+      "n": 1000
+    },
+    "(0.995, 0)": {
+      "accuracy": 0.42946708463949845,
+      "mean_tokens": 32.626959247648905,
+      "true_convergence": 0,
+      "n": 319
+    },
+    "(0.995, 1)": {
+      "accuracy": 0.45614035087719296,
+      "mean_tokens": 22.30701754385965,
+      "true_convergence": 4,
+      "n": 342
+    },
+    "(0.995, 2)": {
+      "accuracy": 0.6637168141592921,
+      "mean_tokens": 16.67551622418879,
+      "true_convergence": 35,
+      "n": 339
+    },
+    "(0.995, 'all')": {
+      "accuracy": 0.518,
+      "mean_tokens": 23.69,
+      "true_convergence": 39,
+      "n": 1000
+    },
+    "(1.0, 0)": {
+      "accuracy": 0.6959247648902821,
+      "mean_tokens": 32.626959247648905,
+      "true_convergence": 0,
+      "n": 319
+    },
+    "(1.0, 1)": {
+      "accuracy": 0.7222222222222222,
+      "mean_tokens": 22.30701754385965,
+      "true_convergence": 4,
+      "n": 342
+    },
+    "(1.0, 2)": {
+      "accuracy": 0.7876106194690266,
+      "mean_tokens": 16.67551622418879,
+      "true_convergence": 35,
+      "n": 339
+    },
+    "(1.0, 'all')": {
+      "accuracy": 0.736,
+      "mean_tokens": 23.69,
+      "true_convergence": 39,
+      "n": 1000
+    }
+  },
+  "14a0_decision": "halt_truncation",
+  "14a1_auc": {},
+  "14a2_op_probe": {
+    "final_accuracy": 0.9666894488577159,
+    "history": [
+      {
+        "epoch": 1,
+        "loss": 0.19040737572312355,
+        "accuracy": 0.9487568766736507
+      },
+      {
+        "epoch": 2,
+        "loss": 0.09675130963325501,
+        "accuracy": 0.9655998252120425
+      },
+      {
+        "epoch": 3,
+        "loss": 0.09274004502594471,
+        "accuracy": 0.9661684462919183
+      },
+      {
+        "epoch": 4,
+        "loss": 0.09136760675907135,
+        "accuracy": 0.9660984190653326
+      },
+      {
+        "epoch": 5,
+        "loss": 0.09053483510017395,
+        "accuracy": 0.9665353889592273
+      },
+      {
+        "epoch": 6,
+        "loss": 0.08969125334918499,
+        "accuracy": 0.9666922499467793
+      },
+      {
+        "epoch": 7,
+        "loss": 0.0892728967666626,
+        "accuracy": 0.9667454706389844
+      },
+      {
+        "epoch": 8,
+        "loss": 0.08905688604712486,
+        "accuracy": 0.9667790837077456
+      },
+      {
+        "epoch": 9,
+        "loss": 0.08837071365118027,
+        "accuracy": 0.9667594760843016
+      },
+      {
+        "epoch": 10,
+        "loss": 0.08863254016637802,
+        "accuracy": 0.9666894488577159
+      }
+    ]
+  },
+  "14b1_cycle_detector": {
+    "precision": 1.0,
+    "recall": 0.002081165452653486,
+    "f1": 0.004153686396677051,
+    "tp": 2,
+    "fp": 0,
+    "tn": 39,
+    "fn": 959
+  },
+  "14b2_confusion_head": {
+    "precision": 0.9623638862459034,
+    "recall": 0.977765843179377,
+    "f1": 0.9700037295540519
+  },
+  "14c_conditions": {
+    "A_baseline": {
+      "tier_metrics": {
+        "0": {
+          "n": 319,
+          "accuracy": 0.4263322884012539,
+          "mean_tokens": 32.626959247648905,
+          "true_convergence": 0,
+          "false_convergence": 319
+        },
+        "1": {
+          "n": 342,
+          "accuracy": 0.45614035087719296,
+          "mean_tokens": 22.30701754385965,
+          "true_convergence": 4,
+          "false_convergence": 338
+        },
+        "2": {
+          "n": 339,
+          "accuracy": 0.6637168141592921,
+          "mean_tokens": 16.67551622418879,
+          "true_convergence": 35,
+          "false_convergence": 304
+        }
+      },
+      "overall_accuracy": 0.517,
+      "mean_tokens": 23.69,
+      "true_convergence_count": 39,
+      "n": 1000
+    },
+    "B_constant_boost": {
+      "tier_metrics": {
+        "0": {
+          "n": 319,
+          "accuracy": 0.4263322884012539,
+          "mean_tokens": 32.626959247648905,
+          "true_convergence": 0,
+          "false_convergence": 319
+        },
+        "1": {
+          "n": 342,
+          "accuracy": 0.45614035087719296,
+          "mean_tokens": 22.30701754385965,
+          "true_convergence": 4,
+          "false_convergence": 338
+        },
+        "2": {
+          "n": 339,
+          "accuracy": 0.6637168141592921,
+          "mean_tokens": 16.67551622418879,
+          "true_convergence": 35,
+          "false_convergence": 304
+        }
+      },
+      "overall_accuracy": 0.517,
+      "mean_tokens": 23.69,
+      "true_convergence_count": 39,
+      "n": 1000
+    },
+    "C_cycle_detector": {
+      "tier_metrics": {
+        "0": {
+          "n": 319,
+          "accuracy": 0.6959247648902821,
+          "mean_tokens": 45.61755485893417,
+          "true_convergence": 0,
+          "false_convergence": 319
+        },
+        "1": {
+          "n": 342,
+          "accuracy": 0.7222222222222222,
+          "mean_tokens": 35.441520467836256,
+          "true_convergence": 4,
+          "false_convergence": 338
+        },
+        "2": {
+          "n": 339,
+          "accuracy": 0.7876106194690266,
+          "mean_tokens": 29.38938053097345,
+          "true_convergence": 35,
+          "false_convergence": 304
+        }
+      },
+      "overall_accuracy": 0.736,
+      "mean_tokens": 36.636,
+      "true_convergence_count": 39,
+      "n": 1000
+    },
+    "D_confusion_head": {
+      "tier_metrics": {
+        "0": {
+          "n": 319,
+          "accuracy": 0.6959247648902821,
+          "mean_tokens": 45.61755485893417,
+          "true_convergence": 0,
+          "false_convergence": 319
+        },
+        "1": {
+          "n": 342,
+          "accuracy": 0.7222222222222222,
+          "mean_tokens": 35.441520467836256,
+          "true_convergence": 4,
+          "false_convergence": 338
+        },
+        "2": {
+          "n": 339,
+          "accuracy": 0.7876106194690266,
+          "mean_tokens": 29.38938053097345,
+          "true_convergence": 35,
+          "false_convergence": 304
+        }
+      },
+      "overall_accuracy": 0.736,
+      "mean_tokens": 36.636,
+      "true_convergence_count": 39,
+      "n": 1000
+    }
+  },
+  "purity": {
+    "baseline": 0.7488986784140969,
+    "best_condition": 0.7488986784140969,
+    "best_condition_name": "C_cycle_detector"
+  },
+  "convergence_analysis": {
+    "convergence": {
+      "n": 39,
+      "accuracy": 0.8974358974358975,
+      "mean_tokens": 12.461538461538462
+    },
+    "cycling": {
+      "n": 961,
+      "accuracy": 0.7294484911550468,
+      "mean_tokens": 37.61706555671176
+    },
+    "accuracy_gap": -0.16798740628085063
+  }
+}

@@ -1,0 +1,79 @@
+==============================================================
+Phase 17b: Architectural Proprioception — Control Comparison
+==============================================================
+Device : cuda
+Groups : ['C', 'D', 'E_ssm']
+Phase 9 ref: C r=-0.290 | D r=-0.725 | E_ssm r=-0.836
+
+Creating datasets...
+  Train parity: 6357 / 8000
+  Test  parity: 791 / 1000
+
+──────────────────────────────────────────────────────────────
+  Group C  (SSM+CE / (no halt))
+──────────────────────────────────────────────────────────────
+  Params: 5,058,906  d_model=512  d_state=16
+  Training probe (10 epochs)...
+      Probe epoch 1: loss=0.6507
+      Probe epoch 5: loss=0.5548
+      Probe epoch 10: loss=0.5255
+  Probe accuracy: 99.1%
+  Extracting signals...
+  791 examples
+  r = -0.2896 ± 0.1498  (99% neg, 47% |r|>0.3)
+  threshold τ = 0.000 ± 0.000
+  raw   xcorr peak τ = -3
+  deriv xcorr peak τ = +2
+
+──────────────────────────────────────────────────────────────
+  Group D  (SSM+Lth / (thermo))
+──────────────────────────────────────────────────────────────
+  Params: 5,058,906  d_model=512  d_state=16
+  Training probe (10 epochs)...
+      Probe epoch 1: loss=0.6722
+      Probe epoch 5: loss=0.6149
+      Probe epoch 10: loss=0.5975
+  Probe accuracy: 99.4%
+  Extracting signals...
+  791 examples
+  r = -0.7254 ± 0.0500  (100% neg, 100% |r|>0.3)
+  threshold τ = -1.449 ± 0.550
+  raw   xcorr peak τ = +0
+  deriv xcorr peak τ = -2
+
+──────────────────────────────────────────────────────────────
+  Group E_ssm  (SSM+halt / (explicit))
+──────────────────────────────────────────────────────────────
+  Params: 5,058,906  d_model=512  d_state=16
+  Training probe (10 epochs)...
+      Probe epoch 1: loss=0.6786
+      Probe epoch 5: loss=0.5841
+      Probe epoch 10: loss=0.5584
+  Probe accuracy: 99.7%
+  Extracting signals...
+  791 examples
+  r = -0.8360 ± 0.0581  (100% neg, 100% |r|>0.3)
+  threshold τ = -2.032 ± 0.929
+  raw   xcorr peak τ = +0
+  deriv xcorr peak τ = -2
+
+══════════════════════════════════════════════════════════════
+  COMPARISON SUMMARY
+══════════════════════════════════════════════════════════════
+Group      mean r  frac_neg   τ mean  raw τ*  drv τ*
+──────────────────────────────────────────────────────────────
+C         -0.2896       99%    0.000      -3      +2
+D         -0.7254      100%   -1.449      +0      -2
+E_ssm     -0.8360      100%   -2.032      +0      -2
+══════════════════════════════════════════════════════════════
+  τ* = peak xcorr lag  (positive = halt leads state)
+
+Generating figures...
+  Saved figures/fig_p1b_mean_trajectories.png
+  Saved figures/fig_p2b_xcorr_comparison.png
+  Saved figures/fig_p3b_r_comparison.png
+  Saved figures/fig_p4b_gallery.png
+
+  Saved results/phase17b_results.json
+
+Done.

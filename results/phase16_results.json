@@ -1,0 +1,46 @@
+{
+  "overall": {
+    "n_total": 1000,
+    "n_correct": 40,
+    "accuracy": 0.04
+  },
+  "per_tier": {
+    "0": {
+      "n": 319,
+      "accuracy": 0.0219435736677116,
+      "mean_tokens": 14.545454545454545
+    },
+    "1": {
+      "n": 342,
+      "accuracy": 0.038011695906432746,
+      "mean_tokens": 14.842105263157896
+    },
+    "2": {
+      "n": 339,
+      "accuracy": 0.058997050147492625,
+      "mean_tokens": 14.946902654867257
+    }
+  },
+  "stop_reasons": {
+    "halt_token": 1000
+  },
+  "n_incorrect": 960,
+  "completeness": {
+    "INCOMPLETE_OUTPUT": 113,
+    "HAS_RESULT": 847
+  },
+  "verification": {
+    "UNPARSEABLE": 783,
+    "NO_RESULT": 113,
+    "WRONG_INTERMEDIATE": 63,
+    "ALL_CORRECT": 1,
+    "WRONG_COMPOSITION": 0
+  },
+  "regime": {
+    "PROGRESSING": 630,
+    "ORBITING": 327,
+    "CONVERGING": 2,
+    "DIFFUSING": 1,
+    "OTHER": 0
+  }
+}

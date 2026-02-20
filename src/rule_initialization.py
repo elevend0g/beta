@@ -691,10 +691,50 @@ def train_rim_model(train_ds, val_ds, device, results_dir,
 # Generation + Evaluation
 # ============================================================================
 
+def evaluate_purity_corrected(model, generated_ids, expression, device, purity_eval):
+    """
+    Correct purity evaluation: run one final forward pass on the complete
+    generated sequence to get states aligned with token positions.
+
+    During autoregressive generation, state_vectors[i] = state at generation
+    step i, NOT at token position i. find_op_token_positions returns token
+    positions. This mismatch caused the false 16.6% purity reading.
+
+    Fix: feed the complete generated sequence through the model in one pass.
+    Now states_sequence[0, pos, :] = state at token position pos.
+    """
+    model.eval()
+    with torch.no_grad():
+        input_tensor = torch.tensor([generated_ids], dtype=torch.long, device=device)
+
+        max_pos = getattr(model, 'max_seq_len', 256)
+        if hasattr(model, 'pos_encoding'):
+            max_pos = model.pos_encoding.num_embeddings
+        if input_tensor.size(1) > max_pos:
+            input_tensor = input_tensor[:, :max_pos]
+
+        outputs = model(input_tensor)
+        # states_sequence[0, pos, :] = state at token position pos
+        full_states = outputs['states_sequence'][0].cpu()  # [L, d_state]
+
+    # Now indexing is correct: full_states[pos] = state at token pos
+    position_states = [full_states[i] for i in range(full_states.size(0))]
+
+    purity_result = purity_eval.evaluate_trajectory(
+        position_states, expression, generated_ids[:full_states.size(0)]
+    )
+
+    return purity_result
+
+
 def run_rim_generation(model, test_ds, device):
     """
-    Run autoregressive generation with purity tracking.
+    Run autoregressive generation with corrected purity tracking.
     Reuses CompressibleGenerator and adds GeodesicPurity evaluation.
+
+    Purity fix: uses a single forward pass on the complete generated sequence
+    to get states aligned with token positions, rather than using incremental
+    generation-step states which have mismatched indices.
     """
     generator = CompressibleGenerator(model, device=device)
     purity_eval = GeodesicPurity()
@@ -708,13 +748,13 @@ def run_rim_generation(model, test_ds, device):
 
         gen_result = generator.generate(expression)
 
-        # Confusion head analysis
+        # Confusion head analysis (uses generation-step states — correct for this)
         osc_result = detect_oscillation(gen_result['state_vectors'])
         convergence = classify_convergence(gen_result, osc_result)
 
-        # Geodesic purity
-        purity_result = purity_eval.evaluate_trajectory(
-            gen_result['state_vectors'], expression, gen_result['generated_ids']
+        # CORRECTED purity: single forward pass on complete sequence
+        purity_result = evaluate_purity_corrected(
+            model, gen_result['generated_ids'], expression, device, purity_eval
         )
 
         is_correct = (gen_result['parsed_answer'] == ground_truth)
@@ -746,7 +786,7 @@ def run_rim_generation(model, test_ds, device):
             'generated_text': gen_result['generated_text'][:200],
             'geodesic_purity': purity_result['purity'],
             'n_constraints': purity_result['n_constraints'],
-            'n_satisfied': purity_result['n_satisfied'],
+            'n_satisfied': purity_result.get('n_satisfied', 0),
             'constraint_at_halt': constraint_at_halt,
         })
 

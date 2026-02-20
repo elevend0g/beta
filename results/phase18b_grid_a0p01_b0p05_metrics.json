@@ -1,0 +1,27 @@
+{
+  "accuracy": 1.0,
+  "halt_f1": 0.9884170967018174,
+  "probe_acc": 1.0,
+  "mean_r": -0.7891355159159105,
+  "median_r": -0.7872588634490967,
+  "std_r": 0.030603041258701884,
+  "frac_significant": 1.0,
+  "tau_threshold_mean": -2.063211125158028,
+  "tau_threshold_median": -2.0,
+  "tau_derivative_mean": -0.029077117572692796,
+  "tau_derivative_median": 0.0,
+  "gradient_disparity": {
+    "mean": 1.222503160556258,
+    "median": 2.0,
+    "std": 0.9729849310410693,
+    "frac_anticipatory": 0.0,
+    "frac_simultaneous": 0.3868520859671302,
+    "mean_collapse_strength": 0.5477190240746653,
+    "mean_rise_strength": 0.5443774394304803,
+    "mean_magnitude_ratio": 1.003814225073514,
+    "n": 791
+  },
+  "n_examples": 791,
+  "alpha": 0.01,
+  "beta": 0.05
+}

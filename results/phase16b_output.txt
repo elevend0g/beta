@@ -1,0 +1,249 @@
+Device: cuda
+
+============================================================
+Phase 16b: Failure Analysis — Basin Model
+============================================================
+
+--- Loading Model (pna_ssm) ---
+  Checkpoint: results/group_C_model.pt
+  Model loaded: 5,058,906 params
+  Has halt head: True
+
+--- Creating Test Dataset ---
+  Test: 1000 examples
+
+--- Generating Answers ---
+
+  Overall accuracy: 40/1000 = 4.0%
+
+  Per-tier accuracy:
+    T0: 2.2% (7/319) tokens=14.5
+    T1: 3.8% (13/342) tokens=14.8
+    T2: 5.9% (20/339) tokens=14.9
+
+  Stop reasons: {'halt_token': 1000}
+
+============================================================
+Failure Analysis (960 incorrect examples)
+============================================================
+
+--- a) Output Completeness ---
+  INCOMPLETE_OUTPUT (no Result:): 113 (11.8%)
+  HAS_RESULT:                     847 (88.2%)
+
+--- b) Intermediate Verification ---
+  NO_RESULT                :  113 (11.8%)
+  WRONG_INTERMEDIATE       :   63 (6.6%)
+  WRONG_COMPOSITION        :    0 (0.0%)
+  ALL_CORRECT              :    1 (0.1%)
+  UNPARSEABLE              :  783 (81.6%)
+  (Reclassified 1 ALL_CORRECT -> WRONG_COMPOSITION)
+
+--- c) Regime at Final Step ---
+  CONVERGING     :    2 (0.2%)  mean Sc=0.000 mean grad_H=-0.0855
+  ORBITING       :  327 (34.1%)  mean Sc=0.855 mean grad_H=0.0021
+  PROGRESSING    :  630 (65.6%)  mean Sc=0.861 mean grad_H=0.0600
+  DIFFUSING      :    1 (0.1%)  mean Sc=0.000 mean grad_H=-0.0139
+  OTHER          :    0 (0.0%)
+
+--- d) Expression Difficulty ---
+
+  Error rate by num_ops:
+    ops=3: 96.1% error rate (146/152)
+    ops=4: 97.7% error rate (173/177)
+    ops=5: 97.3% error rate (178/183)
+    ops=6: 89.3% error rate (151/169)
+    ops=7: 99.4% error rate (171/172)
+    ops=8: 95.9% error rate (141/147)
+
+  Error rate by effective_ops:
+    eff_ops=0: 100.0% error rate (36/36)
+    eff_ops=1: 96.5% error rate (83/86)
+    eff_ops=2: 93.6% error rate (117/125)
+    eff_ops=3: 96.1% error rate (174/181)
+    eff_ops=4: 96.7% error rate (146/151)
+    eff_ops=5: 94.5% error rate (154/163)
+    eff_ops=6: 97.3% error rate (110/113)
+    eff_ops=7: 99.0% error rate (97/98)
+    eff_ops=8: 91.5% error rate (43/47)
+
+  Correlation with error:
+    num_ops:       r = -0.009
+    effective_ops: r = -0.001
+
+--- Cross-tabulation: Verification Mode x Regime ---
+  Mode                      |  CONVERGING |    ORBITING | PROGRESSING |   DIFFUSING |       OTHER |  Total
+  --------------------------------------------------------------------------------------------------------------
+  NO_RESULT                 |           2 |           5 |         105 |           1 |           0 |    113
+  WRONG_INTERMEDIATE        |           0 |          27 |          36 |           0 |           0 |     63
+  WRONG_COMPOSITION         |           0 |           0 |           1 |           0 |           0 |      1
+  UNPARSEABLE               |           0 |         295 |         488 |           0 |           0 |    783
+
+============================================================
+Representative Error Examples (up to 5 per failure mode)
+============================================================
+
+  --- NO_RESULT (113 total) ---
+    Expression:  3-9+6+1*0-7-6-3+2
+    Expected:    2
+    Parsed:      33
+    Regime:      PROGRESSING (Sc=0.935 grad_H=0.2222)
+    Stop:        halt_token (21 tokens)
+    Generated:   <BOS>Input:3-9+6+1*0-7-6-3+2 33<HALT>
+
+    Expression:  9+4-7-5-6+4-2+3+3
+    Expected:    8
+    Parsed:      33
+    Regime:      PROGRESSING (Sc=0.878 grad_H=0.0692)
+    Stop:        halt_token (21 tokens)
+    Generated:   <BOS>Input:9+4-7-5-6+4-2+3+3 33<HALT>
+
+    Expression:  7-2-6+8-8-3-5-8-8
+    Expected:    0
+    Parsed:      5
+    Regime:      PROGRESSING (Sc=0.922 grad_H=0.0816)
+    Stop:        halt_token (21 tokens)
+    Generated:   <BOS>Input:7-2-6+8-8-3-5-8-8 5-<HALT>
+
+    Expression:  7+3+1-8+3-2*1-1+4
+    Expected:    7
+    Parsed:      11
+    Regime:      PROGRESSING (Sc=0.900 grad_H=0.2217)
+    Stop:        halt_token (21 tokens)
+    Generated:   <BOS>Input:7+3+1-8+3-2*1-1+4 11<HALT>
+
+    Expression:  3+6-6-4-6-4-6+1+3
+    Expected:    4
+    Parsed:      61
+    Regime:      PROGRESSING (Sc=0.881 grad_H=0.2244)
+    Stop:        halt_token (21 tokens)
+    Generated:   <BOS>Input:3+6-6-4-6-4-6+1+3 61<HALT>
+
+
+  --- WRONG_INTERMEDIATE (63 total) ---
+    Expression:  7+4-6-8
+    Expected:    0
+    Parsed:      1
+    Regime:      ORBITING (Sc=0.923 grad_H=0.0078)
+    Stop:        halt_token (14 tokens)
+    Generated:   <BOS>Input:7+4-6-8 6-8=1 Result:1<HALT>
+      Wrong step: 6-8=1 (expected 0)
+
+    Expression:  6+9-3-7+8-9-4-9-4
+    Expected:    0
+    Parsed:      9
+    Regime:      PROGRESSING (Sc=0.901 grad_H=0.0485)
+    Stop:        halt_token (24 tokens)
+    Generated:   <BOS>Input:6+9-3-7+8-9-4-9-4 9-4=9 Result:9<HALT>
+      Wrong step: 9-4=9 (expected 5)
+
+    Expression:  7-1+6+8+9-9-7+2-2
+    Expected:    13
+    Parsed:      100
+    Regime:      ORBITING (Sc=0.887 grad_H=-0.0116)
+    Stop:        halt_token (25 tokens)
+    Generated:   <BOS>Input:7-1+6+8+9-9-7+2-2 2-2=10 Result:100 Result:0<HALT>
+      Wrong step: 2-2=10 (expected 0)
+
+    Expression:  4+2-1-5
+    Expected:    0
+    Parsed:      18
+    Regime:      ORBITING (Sc=0.883 grad_H=-0.0027)
+    Stop:        halt_token (15 tokens)
+    Generated:   <BOS>Input:4+2-1-5 1-5=18 Result:18<HALT>
+      Wrong step: 1-5=18 (expected 0)
+
+    Expression:  7+7-7-9
+    Expected:    0
+    Parsed:      1
+    Regime:      PROGRESSING (Sc=0.927 grad_H=0.0354)
+    Stop:        halt_token (14 tokens)
+    Generated:   <BOS>Input:7+7-7-9 7-7=1 Result:1<HALT>
+      Wrong step: 7-7=1 (expected 0)
+
+
+  --- WRONG_COMPOSITION (1 total) ---
+    Expression:  4+1-1+2-2+9-9+7-4
+    Expected:    7
+    Parsed:      3
+    Regime:      PROGRESSING (Sc=0.897 grad_H=0.0878)
+    Stop:        halt_token (24 tokens)
+    Generated:   <BOS>Input:4+1-1+2-2+9-9+7-4 7-4=3 Result:3<HALT>
+
+
+  --- UNPARSEABLE (783 total) ---
+    Expression:  3-5-6+8-9-6+5
+    Expected:    5
+    Parsed:      -55
+    Regime:      PROGRESSING (Sc=0.894 grad_H=0.0294)
+    Stop:        halt_token (14 tokens)
+    Generated:   <BOS>Input:3-5-6+8-9-6+5 Result:-55<HALT>
+
+    Expression:  3+9-7+9
+    Expected:    14
+    Parsed:      97
+    Regime:      ORBITING (Sc=0.930 grad_H=-0.0019)
+    Stop:        halt_token (13 tokens)
+    Generated:   <BOS>Input:3+9-7+9 9=97 Result:97<HALT>
+
+    Expression:  7+4-4-6
+    Expected:    1
+    Parsed:      -4
+    Regime:      PROGRESSING (Sc=0.905 grad_H=-0.0622)
+    Stop:        halt_token (13 tokens)
+    Generated:   <BOS>Input:7+4-4-6 4=-4 Result:-4<HALT>
+
+    Expression:  2+7-7+6-7+2-6
+    Expected:    0
+    Parsed:      -66
+    Regime:      ORBITING (Sc=0.782 grad_H=-0.0118)
+    Stop:        halt_token (14 tokens)
+    Generated:   <BOS>Input:2+7-7+6-7+2-6 Result:-66<HALT>
+
+    Expression:  6+5-6*0+4-2+5
+    Expected:    7
+    Parsed:      105
+    Regime:      PROGRESSING (Sc=0.881 grad_H=0.0265)
+    Stop:        halt_token (14 tokens)
+    Generated:   <BOS>Input:6+5-6*0+4-2+5 Result:105<HALT>
+
+
+--- Failure Breakdown by Tier ---
+
+  Tier 0: 312/319 incorrect
+    NO_RESULT: 36
+    WRONG_INTERMEDIATE: 16
+    UNPARSEABLE: 260
+    [CONVERGING]: 1
+    [ORBITING]: 110
+    [PROGRESSING]: 201
+
+  Tier 1: 329/342 incorrect
+    NO_RESULT: 37
+    WRONG_INTERMEDIATE: 21
+    UNPARSEABLE: 271
+    [CONVERGING]: 1
+    [ORBITING]: 109
+    [PROGRESSING]: 218
+    [DIFFUSING]: 1
+
+  Tier 2: 319/339 incorrect
+    NO_RESULT: 40
+    WRONG_INTERMEDIATE: 26
+    WRONG_COMPOSITION: 1
+    UNPARSEABLE: 252
+    [ORBITING]: 108
+    [PROGRESSING]: 211
+
+  Saved: results/phase16_results.json
+
+============================================================
+Phase 16: Summary
+============================================================
+  Total: 40/1000 correct (4.0%)
+  Errors: 960
+    INCOMPLETE_OUTPUT:  113
+    WRONG_INTERMEDIATE: 63
+    WRONG_COMPOSITION:  1
+    UNPARSEABLE:        783
+  Dominant regime:      PROGRESSING (630/960)

@@ -1,0 +1,16 @@
+{
+  "accuracy": 1.0,
+  "halt_f1": 0.9838092845378668,
+  "probe_acc": 1.0,
+  "mean_r": 0.6346213797486462,
+  "median_r": 0.6431149840354919,
+  "std_r": 0.13631616935514565,
+  "frac_significant": 0.9620733249051833,
+  "tau_threshold_mean": -2.29582806573957,
+  "tau_threshold_median": -3.0,
+  "tau_derivative_mean": -4.61441213653603,
+  "tau_derivative_median": -5.0,
+  "n_examples": 791,
+  "alpha": 0.0,
+  "beta": 0.2
+}

@@ -1,0 +1,59 @@
+============================================================
+Phase 17: Architectural Proprioception — Focused Reproduction
+============================================================
+Device: cuda
+Target: group_E_ssm_model.pt
+Original Phase 9 result: r = -0.836, lag τ = -2.03
+
+Creating datasets...
+  Train parity: 6357 / 8000
+  Test parity:  791 / 1000
+
+Loading group_E_ssm_model.pt...
+  Parameters: 5,058,906
+  d_model: 512,  d_state: 16
+
+Training d_model probe (10 epochs)...
+      Probe epoch 1: loss=0.6685
+      Probe epoch 5: loss=0.5835
+      Probe epoch 10: loss=0.5566
+  Probe accuracy at result_pos: 99.7%
+
+Extracting signals...
+  Extracted 791 examples
+
+Computing metrics...
+
+──────────────────────────────────────────────────────────
+  REPRODUCTION SUMMARY
+──────────────────────────────────────────────────────────
+  A) Instantaneous correlation
+     mean r       = -0.8360  (Phase 9: -0.836)
+     median r     = -0.8427
+     std r        = 0.0581
+     frac. neg.   = 100.0%  (Phase 9: 100%)
+     frac. |r|>.3 = 100.0%  (Phase 9: 100%)
+     n            = 791
+
+  B) Threshold-lag (50% / 0.5 crossings)
+     mean lag     = -2.032  (Phase 9: -2.03)
+     median lag   = -2.000  (Phase 9: -2.0)
+     std lag      = 0.929  (Phase 9:  0.93)
+
+  C) Raw-signal cross-correlation  (τ > 0 = HC leads SE)
+     peak τ       = +0   (most-negative xcorr)
+     peak xcorr   = -0.8360
+
+  D) Derivative cross-correlation  (τ > 0 = dHC/dt leads −dSE/dt)
+     peak τ       = -2   (most-positive xcorr)
+     peak xcorr   = 0.5784
+──────────────────────────────────────────────────────────
+
+Generating figures...
+  Saved figures/fig_p1_mean_trajectories.png
+  Saved figures/fig_p2_xcorr.png
+  Saved figures/fig_p3_gallery.png
+
+  Saved results/phase17_results.json
+
+Done.
