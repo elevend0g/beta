@@ -80,7 +80,7 @@ SORT_ALPHABET = ['A', 'B', 'C', 'D', 'E', 'F']
 D_MODEL    = 512
 D_STATE    = 16
 N_LAYERS   = 6
-MAX_SEQ    = 256
+MAX_SEQ    = 128   # 256→128: halves the S6Block sequential loop, 2× speedup
 EPOCHS     = 50
 BATCH_SIZE = 32
 LR         = 3e-4
@@ -206,7 +206,9 @@ class SortingDataset(Dataset):
             for i in range(input_pos + 1, result_pos):
                 mask[i] = 1
 
-            tier = 0 if n_sym <= 4 else (1 if n_sym <= 6 else 2)
+            # Tiers re-calibrated for sym_range=(3,6):
+            #   T0: n=3  T1: n=4-5  T2: n=6
+            tier = 0 if n_sym <= 3 else (1 if n_sym <= 5 else 2)
 
             self.examples.append({
                 'tokens':         raw,
@@ -245,9 +247,11 @@ class SortingDataset(Dataset):
 
 
 def create_sorting_datasets():
-    train = SortingDataset(8000, seed=42)
-    val   = SortingDataset(1000, seed=123)
-    test  = SortingDataset(1000, seed=456)
+    # sym_range=(3,6): max sequence ~100 tokens, fits comfortably in MAX_SEQ=128.
+    # n=7-8 symbols require up to 204 tokens — too slow on the S6Block for-loop.
+    train = SortingDataset(8000, sym_range=(3, 6), seed=42)
+    val   = SortingDataset(1000, sym_range=(3, 6), seed=123)
+    test  = SortingDataset(1000, sym_range=(3, 6), seed=456)
     return train, val, test
 
 
@@ -302,11 +306,14 @@ def train_sorting_model(model, loss_fn, train_ds, val_ds, device,
     best_state       = None
     patience_counter = 0
     patience         = 10
+    n_batches        = len(train_loader)
+    print_every      = max(1, n_batches // 4)   # ~4 progress ticks per epoch
 
     for epoch in range(1, epochs + 1):
         # ── Train ──
         model.train()
-        for batch in train_loader:
+        epoch_loss = 0.0
+        for step, batch in enumerate(train_loader):
             inp  = batch['input_ids'].to(device)
             tgt  = batch['targets'].to(device)
             rmsk = batch['reasoning_mask'].to(device)
@@ -323,6 +330,12 @@ def train_sorting_model(model, loss_fn, train_ds, val_ds, device,
             torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
             optimizer.step()
             scheduler.step()
+            epoch_loss += ld['total'].item()
+
+            if (step + 1) % print_every == 0:
+                print(f"  [{label}] ep {epoch:3d}  "
+                      f"step {step+1:4d}/{n_batches}  "
+                      f"loss={epoch_loss/(step+1):.4f}", flush=True)
 
         # ── Validate ──
         model.eval()
@@ -350,9 +363,9 @@ def train_sorting_model(model, loss_fn, train_ds, val_ds, device,
         val_loss /= max(1, len(val_loader))
         val_acc   = val_correct / max(1, val_total)
 
-        if epoch % 10 == 0 or epoch == 1:
-            print(f"  [{label}] epoch {epoch:3d}  val_loss={val_loss:.4f}"
-                  f"  val_acc={val_acc:.3f}")
+        print(f"  [{label}] epoch {epoch:3d}  val_loss={val_loss:.4f}"
+              f"  val_acc={val_acc:.3f}  patience={patience_counter}/{patience}",
+              flush=True)
 
         if val_loss < best_val_loss:
             best_val_loss = val_loss
@@ -361,7 +374,7 @@ def train_sorting_model(model, loss_fn, train_ds, val_ds, device,
         else:
             patience_counter += 1
             if patience_counter >= patience:
-                print(f"  [{label}] early stop at epoch {epoch}")
+                print(f"  [{label}] early stop at epoch {epoch}", flush=True)
                 break
 
     if best_state is not None:
@@ -517,7 +530,7 @@ def evaluate_sorting_model(model, test_ds, device, label=''):
     model.eval()
     acc_first = compute_first_token_accuracy(model, test_ds, device)
     acc_full  = compute_full_accuracy(model, test_ds, device)
-    print(f"  [{label}] accuracy: first={acc_first:.3f}  full={acc_full:.3f}")
+    print(f"  [{label}] accuracy: first={acc_first:.3f}  full={acc_full:.3f}", flush=True)
 
     examples = extract_sorting_signals(model, test_ds, device)
     records, lag_range = compute_all_metrics(examples)
@@ -561,7 +574,7 @@ def evaluate_sorting_model(model, test_ds, device, label=''):
     print(f"  [{label}] r={m['mean_r']:.3f}  "
           f"tau_thresh={m['tau_threshold']:.2f}  "
           f"tau_drv={m['tau_drv']}  "
-          f"n={m['n_examples']}")
+          f"n={m['n_examples']}", flush=True)
 
     return m
 
@@ -605,8 +618,8 @@ def run_subexp_a(train_ds, val_ds, test_ds, device, results_dir,
                 results[g] = m
             continue
 
-        print(f"\n{'─'*50}")
-        print(f"  Training {g} …")
+        print(f"\n{'─'*50}", flush=True)
+        print(f"  Training {g} …", flush=True)
         model   = make_sorting_model(device)
         loss_fn = make_loss_fn(g)
         model   = train_sorting_model(model, loss_fn, train_ds, val_ds,
@@ -614,7 +627,7 @@ def run_subexp_a(train_ds, val_ds, test_ds, device, results_dir,
                                       batch_size=batch_size, label=g)
 
         torch.save(model.state_dict(), ckpt_path)
-        print(f"  Saved → {ckpt_path}")
+        print(f"  Saved → {ckpt_path}", flush=True)
 
         model.eval()
         m = evaluate_sorting_model(model, test_ds, device, label=g)

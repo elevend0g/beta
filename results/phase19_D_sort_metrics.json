@@ -1,0 +1,28 @@
+{
+  "label": "D_sort",
+  "accuracy_first": 1.0,
+  "accuracy_full": 0.998,
+  "mean_r": 0.09248953316675033,
+  "frac_negative": 0.34,
+  "frac_significant": 0.223,
+  "tau_threshold": -58.938,
+  "tau_drv": -2,
+  "n_examples": 1000,
+  "tier_metrics": {
+    "0": {
+      "mean_r": 0.029546684373256773,
+      "tau_drv": -2,
+      "n": 215
+    },
+    "1": {
+      "mean_r": 0.10804971603330986,
+      "tau_drv": -2,
+      "n": 524
+    },
+    "2": {
+      "mean_r": 0.11309940545994546,
+      "tau_drv": -2,
+      "n": 261
+    }
+  }
+}

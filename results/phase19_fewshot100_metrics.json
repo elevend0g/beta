@@ -1,0 +1,29 @@
+{
+  "label": "fewshot100",
+  "accuracy_first": 0.625,
+  "accuracy_full": 0.06,
+  "mean_r": -0.8077753805816174,
+  "frac_negative": 1.0,
+  "frac_significant": 0.999,
+  "tau_threshold": -0.855,
+  "tau_drv": 0,
+  "n_examples": 1000,
+  "tier_metrics": {
+    "0": {
+      "mean_r": -0.8650399446487427,
+      "tau_drv": 0,
+      "n": 215
+    },
+    "1": {
+      "mean_r": -0.8051298381263063,
+      "tau_drv": 0,
+      "n": 524
+    },
+    "2": {
+      "mean_r": -0.7659147789423493,
+      "tau_drv": 0,
+      "n": 261
+    }
+  },
+  "n_train": 100
+}

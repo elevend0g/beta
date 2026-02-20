@@ -1,0 +1,871 @@
+======================================================================
+Phase 19: Cross-Domain Proprioception
+======================================================================
+Device:        cuda
+Sorting vocab: 18 tokens
+Model:         PNA_SSM d_model=512 d_state=16 n_layers=6
+Epochs:        50
+
+Creating sorting datasets …
+  Train: 8000  Val: 1000  Test: 1000
+  Example 0: n_sym=3  tier=0  result_pos=26  seq_len=34
+
+======================================================================
+SUB-EXPERIMENT A: Independent Training
+======================================================================
+
+──────────────────────────────────────────────────
+  Training C_sort …
+  [C_sort] ep   1  step   31/125  loss=2.7879
+  [C_sort] ep   1  step   62/125  loss=1.9422
+  [C_sort] ep   1  step   93/125  loss=1.4738
+  [C_sort] ep   1  step  124/125  loss=1.2117
+  [C_sort] epoch   1  val_loss=0.3685  val_acc=0.974  patience=0/10
+  [C_sort] ep   2  step   31/125  loss=0.3363
+  [C_sort] ep   2  step   62/125  loss=0.3073
+  [C_sort] ep   2  step   93/125  loss=0.2863
+  [C_sort] ep   2  step  124/125  loss=0.2697
+  [C_sort] epoch   2  val_loss=0.2159  val_acc=0.994  patience=0/10
+  [C_sort] ep   3  step   31/125  loss=0.2002
+  [C_sort] ep   3  step   62/125  loss=0.1937
+  [C_sort] ep   3  step   93/125  loss=0.1892
+  [C_sort] ep   3  step  124/125  loss=0.1853
+  [C_sort] epoch   3  val_loss=0.1700  val_acc=0.998  patience=0/10
+  [C_sort] ep   4  step   31/125  loss=0.1662
+  [C_sort] ep   4  step   62/125  loss=0.1634
+  [C_sort] ep   4  step   93/125  loss=0.1617
+  [C_sort] ep   4  step  124/125  loss=0.1609
+  [C_sort] epoch   4  val_loss=0.1567  val_acc=1.000  patience=0/10
+  [C_sort] ep   5  step   31/125  loss=0.1534
+  [C_sort] ep   5  step   62/125  loss=0.1537
+  [C_sort] ep   5  step   93/125  loss=0.1528
+  [C_sort] ep   5  step  124/125  loss=0.1521
+  [C_sort] epoch   5  val_loss=0.1497  val_acc=1.000  patience=0/10
+  [C_sort] ep   6  step   31/125  loss=0.1483
+  [C_sort] ep   6  step   62/125  loss=0.1482
+  [C_sort] ep   6  step   93/125  loss=0.1485
+  [C_sort] ep   6  step  124/125  loss=0.1483
+  [C_sort] epoch   6  val_loss=0.1486  val_acc=1.000  patience=0/10
+  [C_sort] ep   7  step   31/125  loss=0.1465
+  [C_sort] ep   7  step   62/125  loss=0.1458
+  [C_sort] ep   7  step   93/125  loss=0.1470
+  [C_sort] ep   7  step  124/125  loss=0.1473
+  [C_sort] epoch   7  val_loss=0.1492  val_acc=1.000  patience=0/10
+  [C_sort] ep   8  step   31/125  loss=0.1449
+  [C_sort] ep   8  step   62/125  loss=0.1459
+  [C_sort] ep   8  step   93/125  loss=0.1456
+  [C_sort] ep   8  step  124/125  loss=0.1457
+  [C_sort] epoch   8  val_loss=0.1499  val_acc=1.000  patience=1/10
+  [C_sort] ep   9  step   31/125  loss=0.1459
+  [C_sort] ep   9  step   62/125  loss=0.1456
+  [C_sort] ep   9  step   93/125  loss=0.1454
+  [C_sort] ep   9  step  124/125  loss=0.1448
+  [C_sort] epoch   9  val_loss=0.1461  val_acc=1.000  patience=2/10
+  [C_sort] ep  10  step   31/125  loss=0.1424
+  [C_sort] ep  10  step   62/125  loss=0.1438
+  [C_sort] ep  10  step   93/125  loss=0.1448
+  [C_sort] ep  10  step  124/125  loss=0.1449
+  [C_sort] epoch  10  val_loss=0.1467  val_acc=1.000  patience=0/10
+  [C_sort] ep  11  step   31/125  loss=0.1440
+  [C_sort] ep  11  step   62/125  loss=0.1433
+  [C_sort] ep  11  step   93/125  loss=0.1432
+  [C_sort] ep  11  step  124/125  loss=0.1433
+  [C_sort] epoch  11  val_loss=0.1459  val_acc=1.000  patience=1/10
+  [C_sort] ep  12  step   31/125  loss=0.1433
+  [C_sort] ep  12  step   62/125  loss=0.1432
+  [C_sort] ep  12  step   93/125  loss=0.1429
+  [C_sort] ep  12  step  124/125  loss=0.1429
+  [C_sort] epoch  12  val_loss=0.1458  val_acc=1.000  patience=0/10
+  [C_sort] ep  13  step   31/125  loss=0.1414
+  [C_sort] ep  13  step   62/125  loss=0.1422
+  [C_sort] ep  13  step   93/125  loss=0.1425
+  [C_sort] ep  13  step  124/125  loss=0.1432
+  [C_sort] epoch  13  val_loss=0.1488  val_acc=1.000  patience=0/10
+  [C_sort] ep  14  step   31/125  loss=0.1416
+  [C_sort] ep  14  step   62/125  loss=0.1421
+  [C_sort] ep  14  step   93/125  loss=0.1422
+  [C_sort] ep  14  step  124/125  loss=0.1426
+  [C_sort] epoch  14  val_loss=0.1470  val_acc=1.000  patience=1/10
+  [C_sort] ep  15  step   31/125  loss=0.1404
+  [C_sort] ep  15  step   62/125  loss=0.1403
+  [C_sort] ep  15  step   93/125  loss=0.1417
+  [C_sort] ep  15  step  124/125  loss=0.1423
+  [C_sort] epoch  15  val_loss=0.1481  val_acc=1.000  patience=2/10
+  [C_sort] ep  16  step   31/125  loss=0.1413
+  [C_sort] ep  16  step   62/125  loss=0.1414
+  [C_sort] ep  16  step   93/125  loss=0.1416
+  [C_sort] ep  16  step  124/125  loss=0.1416
+  [C_sort] epoch  16  val_loss=0.1465  val_acc=1.000  patience=3/10
+  [C_sort] ep  17  step   31/125  loss=0.1407
+  [C_sort] ep  17  step   62/125  loss=0.1401
+  [C_sort] ep  17  step   93/125  loss=0.1402
+  [C_sort] ep  17  step  124/125  loss=0.1406
+  [C_sort] epoch  17  val_loss=0.1464  val_acc=0.999  patience=4/10
+  [C_sort] ep  18  step   31/125  loss=0.1392
+  [C_sort] ep  18  step   62/125  loss=0.1400
+  [C_sort] ep  18  step   93/125  loss=0.1405
+  [C_sort] ep  18  step  124/125  loss=0.1407
+  [C_sort] epoch  18  val_loss=0.1479  val_acc=1.000  patience=5/10
+  [C_sort] ep  19  step   31/125  loss=0.1391
+  [C_sort] ep  19  step   62/125  loss=0.1393
+  [C_sort] ep  19  step   93/125  loss=0.1397
+  [C_sort] ep  19  step  124/125  loss=0.1398
+  [C_sort] epoch  19  val_loss=0.1476  val_acc=1.000  patience=6/10
+  [C_sort] ep  20  step   31/125  loss=0.1377
+  [C_sort] ep  20  step   62/125  loss=0.1376
+  [C_sort] ep  20  step   93/125  loss=0.1386
+  [C_sort] ep  20  step  124/125  loss=0.1385
+  [C_sort] epoch  20  val_loss=0.1492  val_acc=1.000  patience=7/10
+  [C_sort] ep  21  step   31/125  loss=0.1352
+  [C_sort] ep  21  step   62/125  loss=0.1359
+  [C_sort] ep  21  step   93/125  loss=0.1369
+  [C_sort] ep  21  step  124/125  loss=0.1373
+  [C_sort] epoch  21  val_loss=0.1488  val_acc=1.000  patience=8/10
+  [C_sort] ep  22  step   31/125  loss=0.1340
+  [C_sort] ep  22  step   62/125  loss=0.1354
+  [C_sort] ep  22  step   93/125  loss=0.1363
+  [C_sort] ep  22  step  124/125  loss=0.1367
+  [C_sort] epoch  22  val_loss=0.1527  val_acc=1.000  patience=9/10
+  [C_sort] early stop at epoch 22
+  Saved → results/phase19_C_sort_model.pt
+  [C_sort] accuracy: first=1.000  full=0.999
+  [C_sort] r=0.317  tau_thresh=-58.94  tau_drv=-4  n=1000
+
+──────────────────────────────────────────────────
+  Training D_sort …
+  [D_sort] ep   1  step   31/125  loss=2.8244
+  [D_sort] ep   1  step   62/125  loss=1.9819
+  [D_sort] ep   1  step   93/125  loss=1.5161
+  [D_sort] ep   1  step  124/125  loss=1.2567
+  [D_sort] epoch   1  val_loss=0.4343  val_acc=0.968  patience=0/10
+  [D_sort] ep   2  step   31/125  loss=0.3929
+  [D_sort] ep   2  step   62/125  loss=0.3619
+  [D_sort] ep   2  step   93/125  loss=0.3411
+  [D_sort] ep   2  step  124/125  loss=0.3242
+  [D_sort] epoch   2  val_loss=0.2566  val_acc=0.998  patience=0/10
+  [D_sort] ep   3  step   31/125  loss=0.2489
+  [D_sort] ep   3  step   62/125  loss=0.2453
+  [D_sort] ep   3  step   93/125  loss=0.2408
+  [D_sort] ep   3  step  124/125  loss=0.2376
+  [D_sort] epoch   3  val_loss=0.2219  val_acc=1.000  patience=0/10
+  [D_sort] ep   4  step   31/125  loss=0.2208
+  [D_sort] ep   4  step   62/125  loss=0.2180
+  [D_sort] ep   4  step   93/125  loss=0.2154
+  [D_sort] ep   4  step  124/125  loss=0.2141
+  [D_sort] epoch   4  val_loss=0.2070  val_acc=1.000  patience=0/10
+  [D_sort] ep   5  step   31/125  loss=0.2065
+  [D_sort] ep   5  step   62/125  loss=0.2066
+  [D_sort] ep   5  step   93/125  loss=0.2059
+  [D_sort] ep   5  step  124/125  loss=0.2058
+  [D_sort] epoch   5  val_loss=0.2055  val_acc=1.000  patience=0/10
+  [D_sort] ep   6  step   31/125  loss=0.2049
+  [D_sort] ep   6  step   62/125  loss=0.2045
+  [D_sort] ep   6  step   93/125  loss=0.2042
+  [D_sort] ep   6  step  124/125  loss=0.2050
+  [D_sort] epoch   6  val_loss=0.2127  val_acc=1.000  patience=0/10
+  [D_sort] ep   7  step   31/125  loss=0.2056
+  [D_sort] ep   7  step   62/125  loss=0.2041
+  [D_sort] ep   7  step   93/125  loss=0.2035
+  [D_sort] ep   7  step  124/125  loss=0.2033
+  [D_sort] epoch   7  val_loss=0.2042  val_acc=1.000  patience=1/10
+  [D_sort] ep   8  step   31/125  loss=0.2015
+  [D_sort] ep   8  step   62/125  loss=0.2016
+  [D_sort] ep   8  step   93/125  loss=0.2018
+  [D_sort] ep   8  step  124/125  loss=0.2018
+  [D_sort] epoch   8  val_loss=0.2036  val_acc=1.000  patience=0/10
+  [D_sort] ep   9  step   31/125  loss=0.2023
+  [D_sort] ep   9  step   62/125  loss=0.2034
+  [D_sort] ep   9  step   93/125  loss=0.2032
+  [D_sort] ep   9  step  124/125  loss=0.2031
+  [D_sort] epoch   9  val_loss=0.2050  val_acc=1.000  patience=0/10
+  [D_sort] ep  10  step   31/125  loss=0.2010
+  [D_sort] ep  10  step   62/125  loss=0.2016
+  [D_sort] ep  10  step   93/125  loss=0.2017
+  [D_sort] ep  10  step  124/125  loss=0.2018
+  [D_sort] epoch  10  val_loss=0.2049  val_acc=1.000  patience=1/10
+  [D_sort] ep  11  step   31/125  loss=0.2026
+  [D_sort] ep  11  step   62/125  loss=0.2029
+  [D_sort] ep  11  step   93/125  loss=0.2026
+  [D_sort] ep  11  step  124/125  loss=0.2024
+  [D_sort] epoch  11  val_loss=0.2044  val_acc=1.000  patience=2/10
+  [D_sort] ep  12  step   31/125  loss=0.2008
+  [D_sort] ep  12  step   62/125  loss=0.2011
+  [D_sort] ep  12  step   93/125  loss=0.2015
+  [D_sort] ep  12  step  124/125  loss=0.2016
+  [D_sort] epoch  12  val_loss=0.2046  val_acc=1.000  patience=3/10
+  [D_sort] ep  13  step   31/125  loss=0.2003
+  [D_sort] ep  13  step   62/125  loss=0.2007
+  [D_sort] ep  13  step   93/125  loss=0.2012
+  [D_sort] ep  13  step  124/125  loss=0.2014
+  [D_sort] epoch  13  val_loss=0.2055  val_acc=1.000  patience=4/10
+  [D_sort] ep  14  step   31/125  loss=0.2014
+  [D_sort] ep  14  step   62/125  loss=0.2010
+  [D_sort] ep  14  step   93/125  loss=0.2011
+  [D_sort] ep  14  step  124/125  loss=0.2012
+  [D_sort] epoch  14  val_loss=0.2042  val_acc=1.000  patience=5/10
+  [D_sort] ep  15  step   31/125  loss=0.1995
+  [D_sort] ep  15  step   62/125  loss=0.1997
+  [D_sort] ep  15  step   93/125  loss=0.2001
+  [D_sort] ep  15  step  124/125  loss=0.2002
+  [D_sort] epoch  15  val_loss=0.2050  val_acc=1.000  patience=6/10
+  [D_sort] ep  16  step   31/125  loss=0.1986
+  [D_sort] ep  16  step   62/125  loss=0.1993
+  [D_sort] ep  16  step   93/125  loss=0.1996
+  [D_sort] ep  16  step  124/125  loss=0.2003
+  [D_sort] epoch  16  val_loss=0.2082  val_acc=1.000  patience=7/10
+  [D_sort] ep  17  step   31/125  loss=0.2013
+  [D_sort] ep  17  step   62/125  loss=0.2006
+  [D_sort] ep  17  step   93/125  loss=0.2002
+  [D_sort] ep  17  step  124/125  loss=0.2001
+  [D_sort] epoch  17  val_loss=0.2054  val_acc=1.000  patience=8/10
+  [D_sort] ep  18  step   31/125  loss=0.1975
+  [D_sort] ep  18  step   62/125  loss=0.1978
+  [D_sort] ep  18  step   93/125  loss=0.1983
+  [D_sort] ep  18  step  124/125  loss=0.1985
+  [D_sort] epoch  18  val_loss=0.2053  val_acc=1.000  patience=9/10
+  [D_sort] early stop at epoch 18
+  Saved → results/phase19_D_sort_model.pt
+  [D_sort] accuracy: first=1.000  full=0.998
+  [D_sort] r=0.092  tau_thresh=-58.94  tau_drv=-2  n=1000
+
+──────────────────────────────────────────────────
+  Training E_sort …
+  [E_sort] ep   1  step   31/125  loss=2.9228
+  [E_sort] ep   1  step   62/125  loss=2.0530
+  [E_sort] ep   1  step   93/125  loss=1.5901
+  [E_sort] ep   1  step  124/125  loss=1.3249
+  [E_sort] epoch   1  val_loss=0.4713  val_acc=0.882  patience=0/10
+  [E_sort] ep   2  step   31/125  loss=0.4265
+  [E_sort] ep   2  step   62/125  loss=0.3916
+  [E_sort] ep   2  step   93/125  loss=0.3655
+  [E_sort] ep   2  step  124/125  loss=0.3441
+  [E_sort] epoch   2  val_loss=0.2697  val_acc=0.992  patience=0/10
+  [E_sort] ep   3  step   31/125  loss=0.2614
+  [E_sort] ep   3  step   62/125  loss=0.2574
+  [E_sort] ep   3  step   93/125  loss=0.2507
+  [E_sort] ep   3  step  124/125  loss=0.2463
+  [E_sort] epoch   3  val_loss=0.2283  val_acc=1.000  patience=0/10
+  [E_sort] ep   4  step   31/125  loss=0.2222
+  [E_sort] ep   4  step   62/125  loss=0.2221
+  [E_sort] ep   4  step   93/125  loss=0.2204
+  [E_sort] ep   4  step  124/125  loss=0.2190
+  [E_sort] epoch   4  val_loss=0.2131  val_acc=1.000  patience=0/10
+  [E_sort] ep   5  step   31/125  loss=0.2101
+  [E_sort] ep   5  step   62/125  loss=0.2123
+  [E_sort] ep   5  step   93/125  loss=0.2110
+  [E_sort] ep   5  step  124/125  loss=0.2111
+  [E_sort] epoch   5  val_loss=0.2088  val_acc=1.000  patience=0/10
+  [E_sort] ep   6  step   31/125  loss=0.2055
+  [E_sort] ep   6  step   62/125  loss=0.2058
+  [E_sort] ep   6  step   93/125  loss=0.2065
+  [E_sort] ep   6  step  124/125  loss=0.2064
+  [E_sort] epoch   6  val_loss=0.2081  val_acc=1.000  patience=0/10
+  [E_sort] ep   7  step   31/125  loss=0.2075
+  [E_sort] ep   7  step   62/125  loss=0.2069
+  [E_sort] ep   7  step   93/125  loss=0.2064
+  [E_sort] ep   7  step  124/125  loss=0.2060
+  [E_sort] epoch   7  val_loss=0.2068  val_acc=1.000  patience=0/10
+  [E_sort] ep   8  step   31/125  loss=0.2044
+  [E_sort] ep   8  step   62/125  loss=0.2043
+  [E_sort] ep   8  step   93/125  loss=0.2041
+  [E_sort] ep   8  step  124/125  loss=0.2041
+  [E_sort] epoch   8  val_loss=0.2061  val_acc=1.000  patience=0/10
+  [E_sort] ep   9  step   31/125  loss=0.2041
+  [E_sort] ep   9  step   62/125  loss=0.2038
+  [E_sort] ep   9  step   93/125  loss=0.2040
+  [E_sort] ep   9  step  124/125  loss=0.2048
+  [E_sort] epoch   9  val_loss=0.2089  val_acc=1.000  patience=0/10
+  [E_sort] ep  10  step   31/125  loss=0.2037
+  [E_sort] ep  10  step   62/125  loss=0.2034
+  [E_sort] ep  10  step   93/125  loss=0.2037
+  [E_sort] ep  10  step  124/125  loss=0.2040
+  [E_sort] epoch  10  val_loss=0.2075  val_acc=1.000  patience=1/10
+  [E_sort] ep  11  step   31/125  loss=0.2035
+  [E_sort] ep  11  step   62/125  loss=0.2036
+  [E_sort] ep  11  step   93/125  loss=0.2035
+  [E_sort] ep  11  step  124/125  loss=0.2035
+  [E_sort] epoch  11  val_loss=0.2067  val_acc=1.000  patience=2/10
+  [E_sort] ep  12  step   31/125  loss=0.2032
+  [E_sort] ep  12  step   62/125  loss=0.2031
+  [E_sort] ep  12  step   93/125  loss=0.2031
+  [E_sort] ep  12  step  124/125  loss=0.2030
+  [E_sort] epoch  12  val_loss=0.2052  val_acc=1.000  patience=3/10
+  [E_sort] ep  13  step   31/125  loss=0.2022
+  [E_sort] ep  13  step   62/125  loss=0.2022
+  [E_sort] ep  13  step   93/125  loss=0.2025
+  [E_sort] ep  13  step  124/125  loss=0.2026
+  [E_sort] epoch  13  val_loss=0.2058  val_acc=1.000  patience=0/10
+  [E_sort] ep  14  step   31/125  loss=0.2019
+  [E_sort] ep  14  step   62/125  loss=0.2018
+  [E_sort] ep  14  step   93/125  loss=0.2019
+  [E_sort] ep  14  step  124/125  loss=0.2021
+  [E_sort] epoch  14  val_loss=0.2062  val_acc=1.000  patience=1/10
+  [E_sort] ep  15  step   31/125  loss=0.2016
+  [E_sort] ep  15  step   62/125  loss=0.2015
+  [E_sort] ep  15  step   93/125  loss=0.2017
+  [E_sort] ep  15  step  124/125  loss=0.2018
+  [E_sort] epoch  15  val_loss=0.2112  val_acc=1.000  patience=2/10
+  [E_sort] ep  16  step   31/125  loss=0.2035
+  [E_sort] ep  16  step   62/125  loss=0.2029
+  [E_sort] ep  16  step   93/125  loss=0.2027
+  [E_sort] ep  16  step  124/125  loss=0.2026
+  [E_sort] epoch  16  val_loss=0.2063  val_acc=1.000  patience=3/10
+  [E_sort] ep  17  step   31/125  loss=0.2004
+  [E_sort] ep  17  step   62/125  loss=0.2003
+  [E_sort] ep  17  step   93/125  loss=0.2005
+  [E_sort] ep  17  step  124/125  loss=0.2008
+  [E_sort] epoch  17  val_loss=0.2077  val_acc=1.000  patience=4/10
+  [E_sort] ep  18  step   31/125  loss=0.1993
+  [E_sort] ep  18  step   62/125  loss=0.1998
+  [E_sort] ep  18  step   93/125  loss=0.2002
+  [E_sort] ep  18  step  124/125  loss=0.2003
+  [E_sort] epoch  18  val_loss=0.2069  val_acc=1.000  patience=5/10
+  [E_sort] ep  19  step   31/125  loss=0.1988
+  [E_sort] ep  19  step   62/125  loss=0.1993
+  [E_sort] ep  19  step   93/125  loss=0.1994
+  [E_sort] ep  19  step  124/125  loss=0.1996
+  [E_sort] epoch  19  val_loss=0.2079  val_acc=1.000  patience=6/10
+  [E_sort] ep  20  step   31/125  loss=0.1977
+  [E_sort] ep  20  step   62/125  loss=0.1983
+  [E_sort] ep  20  step   93/125  loss=0.1987
+  [E_sort] ep  20  step  124/125  loss=0.1989
+  [E_sort] epoch  20  val_loss=0.2083  val_acc=1.000  patience=7/10
+  [E_sort] ep  21  step   31/125  loss=0.1965
+  [E_sort] ep  21  step   62/125  loss=0.1971
+  [E_sort] ep  21  step   93/125  loss=0.1976
+  [E_sort] ep  21  step  124/125  loss=0.1979
+  [E_sort] epoch  21  val_loss=0.2102  val_acc=1.000  patience=8/10
+  [E_sort] ep  22  step   31/125  loss=0.1956
+  [E_sort] ep  22  step   62/125  loss=0.1962
+  [E_sort] ep  22  step   93/125  loss=0.1968
+  [E_sort] ep  22  step  124/125  loss=0.1971
+  [E_sort] epoch  22  val_loss=0.2126  val_acc=1.000  patience=9/10
+  [E_sort] early stop at epoch 22
+  Saved → results/phase19_E_sort_model.pt
+  [E_sort] accuracy: first=1.000  full=0.997
+  [E_sort] r=-0.450  tau_thresh=-2.42  tau_drv=-2  n=1000
+
+======================================================================
+SUB-EXPERIMENT B: Zero-Shot Transfer
+======================================================================
+
+──────────────────────────────────────────────────
+  Sub-experiment B: zero-shot transfer …
+    Backbone transfer: 78 keys copied, 4 skipped
+  [zero-shot] accuracy: first=0.376  full=0.000
+  [zero-shot] r=-0.713  tau_thresh=-51.01  tau_drv=0  n=1000
+
+======================================================================
+SUB-EXPERIMENT C: Few-Shot Adaptation
+======================================================================
+
+  Sub-exp C: fine-tuning on 100 sorting examples …
+    Backbone transfer: 78 keys copied, 4 skipped
+  [fewshot100] ep   1  step    1/3  loss=3.2168
+  [fewshot100] ep   1  step    2/3  loss=3.2043
+  [fewshot100] ep   1  step    3/3  loss=3.2098
+  [fewshot100] epoch   1  val_loss=3.2054  val_acc=0.026  patience=0/10
+  [fewshot100] ep   2  step    1/3  loss=3.2196
+  [fewshot100] ep   2  step    2/3  loss=3.2059
+  [fewshot100] ep   2  step    3/3  loss=3.1927
+  [fewshot100] epoch   2  val_loss=3.1714  val_acc=0.026  patience=0/10
+  [fewshot100] ep   3  step    1/3  loss=3.1731
+  [fewshot100] ep   3  step    2/3  loss=3.1625
+  [fewshot100] ep   3  step    3/3  loss=3.1506
+  [fewshot100] epoch   3  val_loss=3.1141  val_acc=0.026  patience=0/10
+  [fewshot100] ep   4  step    1/3  loss=3.1286
+  [fewshot100] ep   4  step    2/3  loss=3.1011
+  [fewshot100] ep   4  step    3/3  loss=3.0902
+  [fewshot100] epoch   4  val_loss=3.0364  val_acc=0.026  patience=0/10
+  [fewshot100] ep   5  step    1/3  loss=3.0171
+  [fewshot100] ep   5  step    2/3  loss=3.0112
+  [fewshot100] ep   5  step    3/3  loss=2.9959
+  [fewshot100] epoch   5  val_loss=2.9413  val_acc=0.026  patience=0/10
+  [fewshot100] ep   6  step    1/3  loss=2.9235
+  [fewshot100] ep   6  step    2/3  loss=2.9014
+  [fewshot100] ep   6  step    3/3  loss=2.8942
+  [fewshot100] epoch   6  val_loss=2.8303  val_acc=0.026  patience=0/10
+  [fewshot100] ep   7  step    1/3  loss=2.8098
+  [fewshot100] ep   7  step    2/3  loss=2.7986
+  [fewshot100] ep   7  step    3/3  loss=2.7784
+  [fewshot100] epoch   7  val_loss=2.7045  val_acc=0.025  patience=0/10
+  [fewshot100] ep   8  step    1/3  loss=2.7046
+  [fewshot100] ep   8  step    2/3  loss=2.6783
+  [fewshot100] ep   8  step    3/3  loss=2.6463
+  [fewshot100] epoch   8  val_loss=2.5637  val_acc=0.030  patience=0/10
+  [fewshot100] ep   9  step    1/3  loss=2.5587
+  [fewshot100] ep   9  step    2/3  loss=2.5251
+  [fewshot100] ep   9  step    3/3  loss=2.4951
+  [fewshot100] epoch   9  val_loss=2.4097  val_acc=0.044  patience=0/10
+  [fewshot100] ep  10  step    1/3  loss=2.3734
+  [fewshot100] ep  10  step    2/3  loss=2.3531
+  [fewshot100] ep  10  step    3/3  loss=2.3322
+  [fewshot100] epoch  10  val_loss=2.2470  val_acc=0.054  patience=0/10
+  [fewshot100] ep  11  step    1/3  loss=2.2076
+  [fewshot100] ep  11  step    2/3  loss=2.1933
+  [fewshot100] ep  11  step    3/3  loss=2.1695
+  [fewshot100] epoch  11  val_loss=2.0828  val_acc=0.102  patience=0/10
+  [fewshot100] ep  12  step    1/3  loss=2.0524
+  [fewshot100] ep  12  step    2/3  loss=2.0339
+  [fewshot100] ep  12  step    3/3  loss=2.0055
+  [fewshot100] epoch  12  val_loss=1.9274  val_acc=0.112  patience=0/10
+  [fewshot100] ep  13  step    1/3  loss=1.8887
+  [fewshot100] ep  13  step    2/3  loss=1.8679
+  [fewshot100] ep  13  step    3/3  loss=1.8489
+  [fewshot100] epoch  13  val_loss=1.7865  val_acc=0.215  patience=0/10
+  [fewshot100] ep  14  step    1/3  loss=1.7550
+  [fewshot100] ep  14  step    2/3  loss=1.7345
+  [fewshot100] ep  14  step    3/3  loss=1.7102
+  [fewshot100] epoch  14  val_loss=1.6531  val_acc=0.392  patience=0/10
+  [fewshot100] ep  15  step    1/3  loss=1.6166
+  [fewshot100] ep  15  step    2/3  loss=1.5987
+  [fewshot100] ep  15  step    3/3  loss=1.5720
+  [fewshot100] epoch  15  val_loss=1.5210  val_acc=0.538  patience=0/10
+  [fewshot100] ep  16  step    1/3  loss=1.4817
+  [fewshot100] ep  16  step    2/3  loss=1.4451
+  [fewshot100] ep  16  step    3/3  loss=1.4348
+  [fewshot100] epoch  16  val_loss=1.3954  val_acc=0.562  patience=0/10
+  [fewshot100] ep  17  step    1/3  loss=1.3532
+  [fewshot100] ep  17  step    2/3  loss=1.3447
+  [fewshot100] ep  17  step    3/3  loss=1.3055
+  [fewshot100] epoch  17  val_loss=1.2787  val_acc=0.562  patience=0/10
+  [fewshot100] ep  18  step    1/3  loss=1.2282
+  [fewshot100] ep  18  step    2/3  loss=1.2086
+  [fewshot100] ep  18  step    3/3  loss=1.1836
+  [fewshot100] epoch  18  val_loss=1.1664  val_acc=0.562  patience=0/10
+  [fewshot100] ep  19  step    1/3  loss=1.0994
+  [fewshot100] ep  19  step    2/3  loss=1.0875
+  [fewshot100] ep  19  step    3/3  loss=1.0690
+  [fewshot100] epoch  19  val_loss=1.0575  val_acc=0.562  patience=0/10
+  [fewshot100] ep  20  step    1/3  loss=0.9915
+  [fewshot100] ep  20  step    2/3  loss=0.9734
+  [fewshot100] ep  20  step    3/3  loss=0.9553
+  [fewshot100] epoch  20  val_loss=0.9518  val_acc=0.562  patience=0/10
+  [fewshot100] ep  21  step    1/3  loss=0.8712
+  [fewshot100] ep  21  step    2/3  loss=0.8616
+  [fewshot100] ep  21  step    3/3  loss=0.8566
+  [fewshot100] epoch  21  val_loss=0.8802  val_acc=0.562  patience=0/10
+  [fewshot100] ep  22  step    1/3  loss=0.7990
+  [fewshot100] ep  22  step    2/3  loss=0.7987
+  [fewshot100] ep  22  step    3/3  loss=0.7868
+  [fewshot100] epoch  22  val_loss=0.8253  val_acc=0.560  patience=0/10
+  [fewshot100] ep  23  step    1/3  loss=0.7448
+  [fewshot100] ep  23  step    2/3  loss=0.7318
+  [fewshot100] ep  23  step    3/3  loss=0.7260
+  [fewshot100] epoch  23  val_loss=0.7804  val_acc=0.572  patience=0/10
+  [fewshot100] ep  24  step    1/3  loss=0.6750
+  [fewshot100] ep  24  step    2/3  loss=0.6721
+  [fewshot100] ep  24  step    3/3  loss=0.6781
+  [fewshot100] epoch  24  val_loss=0.7475  val_acc=0.562  patience=0/10
+  [fewshot100] ep  25  step    1/3  loss=0.6502
+  [fewshot100] ep  25  step    2/3  loss=0.6367
+  [fewshot100] ep  25  step    3/3  loss=0.6385
+  [fewshot100] epoch  25  val_loss=0.7161  val_acc=0.561  patience=0/10
+  [fewshot100] ep  26  step    1/3  loss=0.6097
+  [fewshot100] ep  26  step    2/3  loss=0.6024
+  [fewshot100] ep  26  step    3/3  loss=0.6003
+  [fewshot100] epoch  26  val_loss=0.6977  val_acc=0.560  patience=0/10
+  [fewshot100] ep  27  step    1/3  loss=0.5780
+  [fewshot100] ep  27  step    2/3  loss=0.5727
+  [fewshot100] ep  27  step    3/3  loss=0.5644
+  [fewshot100] epoch  27  val_loss=0.6802  val_acc=0.575  patience=0/10
+  [fewshot100] ep  28  step    1/3  loss=0.5505
+  [fewshot100] ep  28  step    2/3  loss=0.5434
+  [fewshot100] ep  28  step    3/3  loss=0.5383
+  [fewshot100] epoch  28  val_loss=0.6666  val_acc=0.572  patience=0/10
+  [fewshot100] ep  29  step    1/3  loss=0.5185
+  [fewshot100] ep  29  step    2/3  loss=0.5119
+  [fewshot100] ep  29  step    3/3  loss=0.5084
+  [fewshot100] epoch  29  val_loss=0.6574  val_acc=0.583  patience=0/10
+  [fewshot100] ep  30  step    1/3  loss=0.4936
+  [fewshot100] ep  30  step    2/3  loss=0.4879
+  [fewshot100] ep  30  step    3/3  loss=0.4831
+  [fewshot100] epoch  30  val_loss=0.6490  val_acc=0.605  patience=0/10
+  [fewshot100] accuracy: first=0.625  full=0.060
+  [fewshot100] r=-0.808  tau_thresh=-0.85  tau_drv=0  n=1000
+
+  Sub-exp C: fine-tuning on 500 sorting examples …
+    Backbone transfer: 78 keys copied, 4 skipped
+  [fewshot500] ep   1  step    3/15  loss=3.1661
+  [fewshot500] ep   1  step    6/15  loss=3.1535
+  [fewshot500] ep   1  step    9/15  loss=3.1365
+  [fewshot500] ep   1  step   12/15  loss=3.1079
+  [fewshot500] ep   1  step   15/15  loss=3.0709
+  [fewshot500] epoch   1  val_loss=2.8380  val_acc=0.015  patience=0/10
+  [fewshot500] ep   2  step    3/15  loss=2.7876
+  [fewshot500] ep   2  step    6/15  loss=2.7222
+  [fewshot500] ep   2  step    9/15  loss=2.6463
+  [fewshot500] ep   2  step   12/15  loss=2.5687
+  [fewshot500] ep   2  step   15/15  loss=2.4891
+  [fewshot500] epoch   2  val_loss=2.0616  val_acc=0.019  patience=0/10
+  [fewshot500] ep   3  step    3/15  loss=2.0019
+  [fewshot500] ep   3  step    6/15  loss=1.9373
+  [fewshot500] ep   3  step    9/15  loss=1.8735
+  [fewshot500] ep   3  step   12/15  loss=1.8116
+  [fewshot500] ep   3  step   15/15  loss=1.7460
+  [fewshot500] epoch   3  val_loss=1.4043  val_acc=0.405  patience=0/10
+  [fewshot500] ep   4  step    3/15  loss=1.3505
+  [fewshot500] ep   4  step    6/15  loss=1.2959
+  [fewshot500] ep   4  step    9/15  loss=1.2413
+  [fewshot500] ep   4  step   12/15  loss=1.1947
+  [fewshot500] ep   4  step   15/15  loss=1.1463
+  [fewshot500] epoch   4  val_loss=0.9129  val_acc=0.562  patience=0/10
+  [fewshot500] ep   5  step    3/15  loss=0.8805
+  [fewshot500] ep   5  step    6/15  loss=0.8631
+  [fewshot500] ep   5  step    9/15  loss=0.8384
+  [fewshot500] ep   5  step   12/15  loss=0.8185
+  [fewshot500] ep   5  step   15/15  loss=0.8032
+  [fewshot500] epoch   5  val_loss=0.7233  val_acc=0.562  patience=0/10
+  [fewshot500] ep   6  step    3/15  loss=0.7033
+  [fewshot500] ep   6  step    6/15  loss=0.6918
+  [fewshot500] ep   6  step    9/15  loss=0.6793
+  [fewshot500] ep   6  step   12/15  loss=0.6717
+  [fewshot500] ep   6  step   15/15  loss=0.6626
+  [fewshot500] epoch   6  val_loss=0.6346  val_acc=0.562  patience=0/10
+  [fewshot500] ep   7  step    3/15  loss=0.6064
+  [fewshot500] ep   7  step    6/15  loss=0.5969
+  [fewshot500] ep   7  step    9/15  loss=0.5921
+  [fewshot500] ep   7  step   12/15  loss=0.5854
+  [fewshot500] ep   7  step   15/15  loss=0.5826
+  [fewshot500] epoch   7  val_loss=0.5744  val_acc=0.708  patience=0/10
+  [fewshot500] ep   8  step    3/15  loss=0.5434
+  [fewshot500] ep   8  step    6/15  loss=0.5345
+  [fewshot500] ep   8  step    9/15  loss=0.5306
+  [fewshot500] ep   8  step   12/15  loss=0.5282
+  [fewshot500] ep   8  step   15/15  loss=0.5257
+  [fewshot500] epoch   8  val_loss=0.5366  val_acc=0.804  patience=0/10
+  [fewshot500] ep   9  step    3/15  loss=0.4873
+  [fewshot500] ep   9  step    6/15  loss=0.4884
+  [fewshot500] ep   9  step    9/15  loss=0.4879
+  [fewshot500] ep   9  step   12/15  loss=0.4861
+  [fewshot500] ep   9  step   15/15  loss=0.4849
+  [fewshot500] epoch   9  val_loss=0.5117  val_acc=0.863  patience=0/10
+  [fewshot500] ep  10  step    3/15  loss=0.4538
+  [fewshot500] ep  10  step    6/15  loss=0.4550
+  [fewshot500] ep  10  step    9/15  loss=0.4529
+  [fewshot500] ep  10  step   12/15  loss=0.4514
+  [fewshot500] ep  10  step   15/15  loss=0.4479
+  [fewshot500] epoch  10  val_loss=0.4809  val_acc=0.933  patience=0/10
+  [fewshot500] ep  11  step    3/15  loss=0.4233
+  [fewshot500] ep  11  step    6/15  loss=0.4159
+  [fewshot500] ep  11  step    9/15  loss=0.4155
+  [fewshot500] ep  11  step   12/15  loss=0.4135
+  [fewshot500] ep  11  step   15/15  loss=0.4106
+  [fewshot500] epoch  11  val_loss=0.4582  val_acc=0.935  patience=0/10
+  [fewshot500] ep  12  step    3/15  loss=0.3745
+  [fewshot500] ep  12  step    6/15  loss=0.3806
+  [fewshot500] ep  12  step    9/15  loss=0.3783
+  [fewshot500] ep  12  step   12/15  loss=0.3802
+  [fewshot500] ep  12  step   15/15  loss=0.3806
+  [fewshot500] epoch  12  val_loss=0.4378  val_acc=0.960  patience=0/10
+  [fewshot500] ep  13  step    3/15  loss=0.3659
+  [fewshot500] ep  13  step    6/15  loss=0.3595
+  [fewshot500] ep  13  step    9/15  loss=0.3593
+  [fewshot500] ep  13  step   12/15  loss=0.3560
+  [fewshot500] ep  13  step   15/15  loss=0.3540
+  [fewshot500] epoch  13  val_loss=0.4208  val_acc=0.972  patience=0/10
+  [fewshot500] ep  14  step    3/15  loss=0.3281
+  [fewshot500] ep  14  step    6/15  loss=0.3284
+  [fewshot500] ep  14  step    9/15  loss=0.3300
+  [fewshot500] ep  14  step   12/15  loss=0.3295
+  [fewshot500] ep  14  step   15/15  loss=0.3320
+  [fewshot500] epoch  14  val_loss=0.4118  val_acc=0.966  patience=0/10
+  [fewshot500] ep  15  step    3/15  loss=0.3167
+  [fewshot500] ep  15  step    6/15  loss=0.3134
+  [fewshot500] ep  15  step    9/15  loss=0.3149
+  [fewshot500] ep  15  step   12/15  loss=0.3143
+  [fewshot500] ep  15  step   15/15  loss=0.3145
+  [fewshot500] epoch  15  val_loss=0.4026  val_acc=0.973  patience=0/10
+  [fewshot500] ep  16  step    3/15  loss=0.2927
+  [fewshot500] ep  16  step    6/15  loss=0.2954
+  [fewshot500] ep  16  step    9/15  loss=0.2944
+  [fewshot500] ep  16  step   12/15  loss=0.2948
+  [fewshot500] ep  16  step   15/15  loss=0.2938
+  [fewshot500] epoch  16  val_loss=0.3916  val_acc=0.978  patience=0/10
+  [fewshot500] ep  17  step    3/15  loss=0.2784
+  [fewshot500] ep  17  step    6/15  loss=0.2755
+  [fewshot500] ep  17  step    9/15  loss=0.2752
+  [fewshot500] ep  17  step   12/15  loss=0.2781
+  [fewshot500] ep  17  step   15/15  loss=0.2800
+  [fewshot500] epoch  17  val_loss=0.3848  val_acc=0.980  patience=0/10
+  [fewshot500] ep  18  step    3/15  loss=0.2597
+  [fewshot500] ep  18  step    6/15  loss=0.2624
+  [fewshot500] ep  18  step    9/15  loss=0.2634
+  [fewshot500] ep  18  step   12/15  loss=0.2667
+  [fewshot500] ep  18  step   15/15  loss=0.2680
+  [fewshot500] epoch  18  val_loss=0.3801  val_acc=0.980  patience=0/10
+  [fewshot500] ep  19  step    3/15  loss=0.2501
+  [fewshot500] ep  19  step    6/15  loss=0.2559
+  [fewshot500] ep  19  step    9/15  loss=0.2574
+  [fewshot500] ep  19  step   12/15  loss=0.2583
+  [fewshot500] ep  19  step   15/15  loss=0.2578
+  [fewshot500] epoch  19  val_loss=0.3791  val_acc=0.983  patience=0/10
+  [fewshot500] ep  20  step    3/15  loss=0.2525
+  [fewshot500] ep  20  step    6/15  loss=0.2513
+  [fewshot500] ep  20  step    9/15  loss=0.2473
+  [fewshot500] ep  20  step   12/15  loss=0.2472
+  [fewshot500] ep  20  step   15/15  loss=0.2458
+  [fewshot500] epoch  20  val_loss=0.3752  val_acc=0.984  patience=0/10
+  [fewshot500] ep  21  step    3/15  loss=0.2360
+  [fewshot500] ep  21  step    6/15  loss=0.2349
+  [fewshot500] ep  21  step    9/15  loss=0.2367
+  [fewshot500] ep  21  step   12/15  loss=0.2375
+  [fewshot500] ep  21  step   15/15  loss=0.2376
+  [fewshot500] epoch  21  val_loss=0.3766  val_acc=0.979  patience=0/10
+  [fewshot500] ep  22  step    3/15  loss=0.2362
+  [fewshot500] ep  22  step    6/15  loss=0.2333
+  [fewshot500] ep  22  step    9/15  loss=0.2313
+  [fewshot500] ep  22  step   12/15  loss=0.2293
+  [fewshot500] ep  22  step   15/15  loss=0.2311
+  [fewshot500] epoch  22  val_loss=0.3755  val_acc=0.983  patience=1/10
+  [fewshot500] ep  23  step    3/15  loss=0.2229
+  [fewshot500] ep  23  step    6/15  loss=0.2232
+  [fewshot500] ep  23  step    9/15  loss=0.2227
+  [fewshot500] ep  23  step   12/15  loss=0.2248
+  [fewshot500] ep  23  step   15/15  loss=0.2253
+  [fewshot500] epoch  23  val_loss=0.3745  val_acc=0.984  patience=2/10
+  [fewshot500] ep  24  step    3/15  loss=0.2164
+  [fewshot500] ep  24  step    6/15  loss=0.2208
+  [fewshot500] ep  24  step    9/15  loss=0.2194
+  [fewshot500] ep  24  step   12/15  loss=0.2200
+  [fewshot500] ep  24  step   15/15  loss=0.2200
+  [fewshot500] epoch  24  val_loss=0.3747  val_acc=0.980  patience=0/10
+  [fewshot500] ep  25  step    3/15  loss=0.2184
+  [fewshot500] ep  25  step    6/15  loss=0.2148
+  [fewshot500] ep  25  step    9/15  loss=0.2157
+  [fewshot500] ep  25  step   12/15  loss=0.2161
+  [fewshot500] ep  25  step   15/15  loss=0.2166
+  [fewshot500] epoch  25  val_loss=0.3730  val_acc=0.983  patience=1/10
+  [fewshot500] ep  26  step    3/15  loss=0.2110
+  [fewshot500] ep  26  step    6/15  loss=0.2108
+  [fewshot500] ep  26  step    9/15  loss=0.2107
+  [fewshot500] ep  26  step   12/15  loss=0.2125
+  [fewshot500] ep  26  step   15/15  loss=0.2134
+  [fewshot500] epoch  26  val_loss=0.3737  val_acc=0.984  patience=0/10
+  [fewshot500] ep  27  step    3/15  loss=0.2142
+  [fewshot500] ep  27  step    6/15  loss=0.2115
+  [fewshot500] ep  27  step    9/15  loss=0.2117
+  [fewshot500] ep  27  step   12/15  loss=0.2116
+  [fewshot500] ep  27  step   15/15  loss=0.2110
+  [fewshot500] epoch  27  val_loss=0.3738  val_acc=0.984  patience=1/10
+  [fewshot500] ep  28  step    3/15  loss=0.2109
+  [fewshot500] ep  28  step    6/15  loss=0.2106
+  [fewshot500] ep  28  step    9/15  loss=0.2113
+  [fewshot500] ep  28  step   12/15  loss=0.2102
+  [fewshot500] ep  28  step   15/15  loss=0.2104
+  [fewshot500] epoch  28  val_loss=0.3735  val_acc=0.984  patience=2/10
+  [fewshot500] ep  29  step    3/15  loss=0.2075
+  [fewshot500] ep  29  step    6/15  loss=0.2086
+  [fewshot500] ep  29  step    9/15  loss=0.2083
+  [fewshot500] ep  29  step   12/15  loss=0.2094
+  [fewshot500] ep  29  step   15/15  loss=0.2093
+  [fewshot500] epoch  29  val_loss=0.3736  val_acc=0.984  patience=3/10
+  [fewshot500] ep  30  step    3/15  loss=0.2130
+  [fewshot500] ep  30  step    6/15  loss=0.2105
+  [fewshot500] ep  30  step    9/15  loss=0.2095
+  [fewshot500] ep  30  step   12/15  loss=0.2091
+  [fewshot500] ep  30  step   15/15  loss=0.2086
+  [fewshot500] epoch  30  val_loss=0.3736  val_acc=0.984  patience=4/10
+  [fewshot500] accuracy: first=0.983  full=0.699
+  [fewshot500] r=-0.623  tau_thresh=-1.84  tau_drv=-2  n=1000
+
+  Sub-exp C: fine-tuning on 1000 sorting examples …
+    Backbone transfer: 78 keys copied, 4 skipped
+  [fewshot1000] ep   1  step    7/31  loss=3.2140
+  [fewshot1000] ep   1  step   14/31  loss=3.1499
+  [fewshot1000] ep   1  step   21/31  loss=3.0447
+  [fewshot1000] ep   1  step   28/31  loss=2.9090
+  [fewshot1000] epoch   1  val_loss=2.1143  val_acc=0.257  patience=0/10
+  [fewshot1000] ep   2  step    7/31  loss=1.9551
+  [fewshot1000] ep   2  step   14/31  loss=1.7773
+  [fewshot1000] ep   2  step   21/31  loss=1.6172
+  [fewshot1000] ep   2  step   28/31  loss=1.4739
+  [fewshot1000] epoch   2  val_loss=0.8704  val_acc=0.562  patience=0/10
+  [fewshot1000] ep   3  step    7/31  loss=0.8249
+  [fewshot1000] ep   3  step   14/31  loss=0.7838
+  [fewshot1000] ep   3  step   21/31  loss=0.7508
+  [fewshot1000] ep   3  step   28/31  loss=0.7212
+  [fewshot1000] epoch   3  val_loss=0.6043  val_acc=0.670  patience=0/10
+  [fewshot1000] ep   4  step    7/31  loss=0.5816
+  [fewshot1000] ep   4  step   14/31  loss=0.5685
+  [fewshot1000] ep   4  step   21/31  loss=0.5599
+  [fewshot1000] ep   4  step   28/31  loss=0.5498
+  [fewshot1000] epoch   4  val_loss=0.5098  val_acc=0.856  patience=0/10
+  [fewshot1000] ep   5  step    7/31  loss=0.4863
+  [fewshot1000] ep   5  step   14/31  loss=0.4776
+  [fewshot1000] ep   5  step   21/31  loss=0.4714
+  [fewshot1000] ep   5  step   28/31  loss=0.4676
+  [fewshot1000] epoch   5  val_loss=0.4588  val_acc=0.924  patience=0/10
+  [fewshot1000] ep   6  step    7/31  loss=0.4188
+  [fewshot1000] ep   6  step   14/31  loss=0.4136
+  [fewshot1000] ep   6  step   21/31  loss=0.4107
+  [fewshot1000] ep   6  step   28/31  loss=0.4088
+  [fewshot1000] epoch   6  val_loss=0.4163  val_acc=0.971  patience=0/10
+  [fewshot1000] ep   7  step    7/31  loss=0.3874
+  [fewshot1000] ep   7  step   14/31  loss=0.3779
+  [fewshot1000] ep   7  step   21/31  loss=0.3740
+  [fewshot1000] ep   7  step   28/31  loss=0.3715
+  [fewshot1000] epoch   7  val_loss=0.3750  val_acc=0.979  patience=0/10
+  [fewshot1000] ep   8  step    7/31  loss=0.3398
+  [fewshot1000] ep   8  step   14/31  loss=0.3378
+  [fewshot1000] ep   8  step   21/31  loss=0.3364
+  [fewshot1000] ep   8  step   28/31  loss=0.3345
+  [fewshot1000] epoch   8  val_loss=0.3548  val_acc=0.983  patience=0/10
+  [fewshot1000] ep   9  step    7/31  loss=0.3040
+  [fewshot1000] ep   9  step   14/31  loss=0.3062
+  [fewshot1000] ep   9  step   21/31  loss=0.3075
+  [fewshot1000] ep   9  step   28/31  loss=0.3078
+  [fewshot1000] epoch   9  val_loss=0.3337  val_acc=0.988  patience=0/10
+  [fewshot1000] ep  10  step    7/31  loss=0.2802
+  [fewshot1000] ep  10  step   14/31  loss=0.2814
+  [fewshot1000] ep  10  step   21/31  loss=0.2831
+  [fewshot1000] ep  10  step   28/31  loss=0.2844
+  [fewshot1000] epoch  10  val_loss=0.3152  val_acc=0.994  patience=0/10
+  [fewshot1000] ep  11  step    7/31  loss=0.2650
+  [fewshot1000] ep  11  step   14/31  loss=0.2658
+  [fewshot1000] ep  11  step   21/31  loss=0.2673
+  [fewshot1000] ep  11  step   28/31  loss=0.2694
+  [fewshot1000] epoch  11  val_loss=0.3053  val_acc=0.992  patience=0/10
+  [fewshot1000] ep  12  step    7/31  loss=0.2596
+  [fewshot1000] ep  12  step   14/31  loss=0.2567
+  [fewshot1000] ep  12  step   21/31  loss=0.2550
+  [fewshot1000] ep  12  step   28/31  loss=0.2554
+  [fewshot1000] epoch  12  val_loss=0.3073  val_acc=0.995  patience=0/10
+  [fewshot1000] ep  13  step    7/31  loss=0.2412
+  [fewshot1000] ep  13  step   14/31  loss=0.2410
+  [fewshot1000] ep  13  step   21/31  loss=0.2410
+  [fewshot1000] ep  13  step   28/31  loss=0.2415
+  [fewshot1000] epoch  13  val_loss=0.2917  val_acc=0.997  patience=1/10
+  [fewshot1000] ep  14  step    7/31  loss=0.2277
+  [fewshot1000] ep  14  step   14/31  loss=0.2324
+  [fewshot1000] ep  14  step   21/31  loss=0.2334
+  [fewshot1000] ep  14  step   28/31  loss=0.2354
+  [fewshot1000] epoch  14  val_loss=0.2886  val_acc=0.993  patience=0/10
+  [fewshot1000] ep  15  step    7/31  loss=0.2262
+  [fewshot1000] ep  15  step   14/31  loss=0.2282
+  [fewshot1000] ep  15  step   21/31  loss=0.2288
+  [fewshot1000] ep  15  step   28/31  loss=0.2285
+  [fewshot1000] epoch  15  val_loss=0.2888  val_acc=0.995  patience=0/10
+  [fewshot1000] ep  16  step    7/31  loss=0.2179
+  [fewshot1000] ep  16  step   14/31  loss=0.2188
+  [fewshot1000] ep  16  step   21/31  loss=0.2192
+  [fewshot1000] ep  16  step   28/31  loss=0.2197
+  [fewshot1000] epoch  16  val_loss=0.2841  val_acc=0.996  patience=1/10
+  [fewshot1000] ep  17  step    7/31  loss=0.2133
+  [fewshot1000] ep  17  step   14/31  loss=0.2129
+  [fewshot1000] ep  17  step   21/31  loss=0.2143
+  [fewshot1000] ep  17  step   28/31  loss=0.2143
+  [fewshot1000] epoch  17  val_loss=0.2808  val_acc=0.996  patience=0/10
+  [fewshot1000] ep  18  step    7/31  loss=0.2040
+  [fewshot1000] ep  18  step   14/31  loss=0.2056
+  [fewshot1000] ep  18  step   21/31  loss=0.2057
+  [fewshot1000] ep  18  step   28/31  loss=0.2063
+  [fewshot1000] epoch  18  val_loss=0.2791  val_acc=0.999  patience=0/10
+  [fewshot1000] ep  19  step    7/31  loss=0.2003
+  [fewshot1000] ep  19  step   14/31  loss=0.2007
+  [fewshot1000] ep  19  step   21/31  loss=0.2021
+  [fewshot1000] ep  19  step   28/31  loss=0.2033
+  [fewshot1000] epoch  19  val_loss=0.2785  val_acc=0.995  patience=0/10
+  [fewshot1000] ep  20  step    7/31  loss=0.1948
+  [fewshot1000] ep  20  step   14/31  loss=0.1963
+  [fewshot1000] ep  20  step   21/31  loss=0.1982
+  [fewshot1000] ep  20  step   28/31  loss=0.1983
+  [fewshot1000] epoch  20  val_loss=0.2785  val_acc=0.997  patience=0/10
+  [fewshot1000] ep  21  step    7/31  loss=0.1918
+  [fewshot1000] ep  21  step   14/31  loss=0.1919
+  [fewshot1000] ep  21  step   21/31  loss=0.1927
+  [fewshot1000] ep  21  step   28/31  loss=0.1934
+  [fewshot1000] epoch  21  val_loss=0.2781  val_acc=0.999  patience=0/10
+  [fewshot1000] ep  22  step    7/31  loss=0.1897
+  [fewshot1000] ep  22  step   14/31  loss=0.1890
+  [fewshot1000] ep  22  step   21/31  loss=0.1902
+  [fewshot1000] ep  22  step   28/31  loss=0.1903
+  [fewshot1000] epoch  22  val_loss=0.2779  val_acc=0.998  patience=0/10
+  [fewshot1000] ep  23  step    7/31  loss=0.1869
+  [fewshot1000] ep  23  step   14/31  loss=0.1875
+  [fewshot1000] ep  23  step   21/31  loss=0.1874
+  [fewshot1000] ep  23  step   28/31  loss=0.1876
+  [fewshot1000] epoch  23  val_loss=0.2778  val_acc=0.998  patience=0/10
+  [fewshot1000] ep  24  step    7/31  loss=0.1845
+  [fewshot1000] ep  24  step   14/31  loss=0.1853
+  [fewshot1000] ep  24  step   21/31  loss=0.1851
+  [fewshot1000] ep  24  step   28/31  loss=0.1858
+  [fewshot1000] epoch  24  val_loss=0.2776  val_acc=0.998  patience=0/10
+  [fewshot1000] ep  25  step    7/31  loss=0.1835
+  [fewshot1000] ep  25  step   14/31  loss=0.1831
+  [fewshot1000] ep  25  step   21/31  loss=0.1837
+  [fewshot1000] ep  25  step   28/31  loss=0.1839
+  [fewshot1000] epoch  25  val_loss=0.2782  val_acc=0.998  patience=0/10
+  [fewshot1000] ep  26  step    7/31  loss=0.1815
+  [fewshot1000] ep  26  step   14/31  loss=0.1808
+  [fewshot1000] ep  26  step   21/31  loss=0.1821
+  [fewshot1000] ep  26  step   28/31  loss=0.1828
+  [fewshot1000] epoch  26  val_loss=0.2785  val_acc=0.999  patience=1/10
+  [fewshot1000] ep  27  step    7/31  loss=0.1812
+  [fewshot1000] ep  27  step   14/31  loss=0.1808
+  [fewshot1000] ep  27  step   21/31  loss=0.1819
+  [fewshot1000] ep  27  step   28/31  loss=0.1821
+  [fewshot1000] epoch  27  val_loss=0.2789  val_acc=0.999  patience=2/10
+  [fewshot1000] ep  28  step    7/31  loss=0.1816
+  [fewshot1000] ep  28  step   14/31  loss=0.1811
+  [fewshot1000] ep  28  step   21/31  loss=0.1808
+  [fewshot1000] ep  28  step   28/31  loss=0.1812
+  [fewshot1000] epoch  28  val_loss=0.2790  val_acc=0.998  patience=3/10
+  [fewshot1000] ep  29  step    7/31  loss=0.1803
+  [fewshot1000] ep  29  step   14/31  loss=0.1799
+  [fewshot1000] ep  29  step   21/31  loss=0.1802
+  [fewshot1000] ep  29  step   28/31  loss=0.1807
+  [fewshot1000] epoch  29  val_loss=0.2790  val_acc=0.998  patience=4/10
+  [fewshot1000] ep  30  step    7/31  loss=0.1798
+  [fewshot1000] ep  30  step   14/31  loss=0.1808
+  [fewshot1000] ep  30  step   21/31  loss=0.1809
+  [fewshot1000] ep  30  step   28/31  loss=0.1807
+  [fewshot1000] epoch  30  val_loss=0.2790  val_acc=0.998  patience=5/10
+  [fewshot1000] accuracy: first=0.998  full=0.902
+  [fewshot1000] r=-0.406  tau_thresh=-2.18  tau_drv=-2  n=1000
+
+══════════════════════════════════════════════════════════════════════
+  PHASE 19 COMPARISON TABLE
+══════════════════════════════════════════════════════════════════════
+
+  ── Parity Reference (Phase 17b) ──────────────────────────────
+  Group                r    τ_drv  Label             
+  ────────────────────────────────────────────────────
+  C               -0.290        2  SSM+CE            
+  D               -0.725       -2  SSM+L_th          
+  E_ssm           -0.836       -2  SSM+halt          
+
+  ── Sorting (Phase 19, Sub-exp A) ─────────────────────────────
+  Group         acc_full         r   τ_threshold    τ_drv       n
+  ────────────────────────────────────────────────────────────────
+  C_sort           0.999     0.317        -58.94       -4    1000
+  D_sort           0.998     0.092        -58.94       -2    1000
+  E_sort           0.997    -0.450         -2.42       -2    1000
+
+  ── Specificity Gradient Test ─────────────────────────────────
+  C_sort → E_sort r gradient: 0.317 → -0.450  PASS
+  E_sort anticipatory (r<-0.5, τ_drv≤-1): FAIL
+  >>> OUTCOME 3 or 4: Domain-specific or not transferable <<<
+
+  ── Transfer Curve (Sub-exp B/C) ──────────────────────────────
+   n_train         r    τ_drv
+  ──────────────────────────────
+         0    -0.713        0
+       100    -0.808        0
+       500    -0.623       -2
+      1000    -0.406       -2
+
+══════════════════════════════════════════════════════════════════════
+
+  Saved results/phase19_comparison_table.json
+
+======================================================================
+FIGURES
+======================================================================
+  Saved figures/fig_p19_1_gradient_comparison.png
+  Saved figures/fig_p19_2_transfer_curve.png
+  Saved figures/fig_p19_3_tier_analysis.png
+  Saved figures/fig_p19_4_trajectory_gallery.png
+  Saved figures/fig_p19_5_xcorr_comparison.png
+
+Phase 19 complete.
